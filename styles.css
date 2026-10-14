@@ -51,10 +51,24 @@ a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
 .post::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.45) 0%,rgba(10,10,10,0) 40%)}
 .post-play{position:absolute;top:12px;left:12px;z-index:1;width:18px;height:18px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
 
+/* ---------- Language switch (header) ---------- */
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.lang-switch{display:inline-flex;border:1px solid #333333;border-radius:999px;padding:3px;gap:2px}
+.lang-switch button{border:0;cursor:pointer;background:transparent;color:#A3A3A3;font-family:'Instrument Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;height:36px;min-width:40px;padding:0 10px;border-radius:999px}
+.lang-switch button:hover{color:#F5F5F5}
+.lang-switch button[aria-pressed="true"]{background:#F5F5F5;color:#0A0A0A}
+.lang-switch button:focus-visible{outline:2px solid #9B7BFF;outline-offset:2px}
+
 /* ---------- Small screens (inline styles need !important) ---------- */
 @media (max-width: 480px){
   .nav-studio{display:none !important}
-  .nav-cta{padding:0 16px !important;font-size:14px !important;height:40px !important}
+  .site-nav{padding:0 16px !important;gap:10px !important}
+  .nav-logo{gap:7px !important}
+  .nav-logo span:first-child{font-size:19px !important}
+  .nav-right{gap:8px}
+  .lang-switch{padding:2px}
+  .lang-switch button{height:32px;min-width:32px;padding:0 7px;font-size:12px}
+  .nav-cta{padding:0 12px !important;font-size:13px !important;height:38px !important}
   .hero{padding:64px 20px 80px !important}
   .hero-visual{height:560px !important;max-width:340px !important}
   .hero-phone{width:250px !important;height:520px !important}
@@ -65,4 +79,8 @@ a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
   .pad-card{padding:28px 24px !important}
   .flow-arrow{margin:0 auto}
   .flow-arrow svg{transform:rotate(90deg)}
+}
+/* Very narrow phones: the header can't fit logo, language switch and button; the hero has the same button. */
+@media (max-width: 350px){
+  .nav-cta{display:none !important}
 }

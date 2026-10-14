@@ -26,6 +26,61 @@ window.__taReady = true;
   targets.forEach(function (el) { io.observe(el); });
 })();
 
+/* ---------- Language switch (EN / ID) ---------- */
+// English is the text in index.html; Indonesian comes from copy-id.js (window.TA_COPY_ID).
+// The choice comes from ?lang=id, then the visitor's last pick, then the browser language.
+window.taLang = 'en';
+(function () {
+  var ID = window.TA_COPY_ID;
+  var buttons = document.querySelectorAll('[data-lang]');
+  if (!ID || !buttons.length) return;
+  var texts = document.querySelectorAll('[data-i18n]');
+  var labels = document.querySelectorAll('[data-i18n-aria]');
+  var meta = document.querySelector('meta[name="description"]');
+  var EN = { 'meta.title': document.title, 'meta.description': meta ? meta.content : '' };
+  texts.forEach(function (el) { EN[el.getAttribute('data-i18n')] = el.textContent; });
+  labels.forEach(function (el) { EN[el.getAttribute('data-i18n-aria')] = el.getAttribute('aria-label'); });
+
+  function apply(lang) {
+    var copy = lang === 'id' ? ID : EN;
+    function pick(key) { return copy[key] != null ? copy[key] : EN[key]; }
+    texts.forEach(function (el) { el.textContent = pick(el.getAttribute('data-i18n')); });
+    labels.forEach(function (el) { el.setAttribute('aria-label', pick(el.getAttribute('data-i18n-aria'))); });
+    document.title = pick('meta.title');
+    if (meta) meta.content = pick('meta.description');
+    document.documentElement.lang = lang;
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
+    window.taLang = lang;
+    document.dispatchEvent(new Event('ta:lang'));
+  }
+
+  function initial() {
+    var fromUrl = new URLSearchParams(location.search).get('lang');
+    if (fromUrl === 'id' || fromUrl === 'en') return fromUrl;
+    try {
+      var saved = localStorage.getItem('ta-lang');
+      if (saved === 'id' || saved === 'en') return saved;
+    } catch (e) {}
+    var langs = navigator.languages || [navigator.language || ''];
+    return /^(id|in)\b/i.test(langs[0] || '') ? 'id' : 'en';
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      apply(lang);
+      try { localStorage.setItem('ta-lang', lang); } catch (e) {}
+      // Keep the address shareable in the chosen language.
+      var url = new URL(location.href);
+      if (lang === 'id') { url.searchParams.set('lang', 'id'); } else { url.searchParams.delete('lang'); }
+      history.replaceState(null, '', url);
+    });
+  });
+
+  var start = initial();
+  if (start !== 'en') apply(start);
+})();
+
 /* ---------- Earnings estimator ---------- */
 (function () {
   // The creator's share of each sale (percent) is picked with the "Your share" slider;
@@ -51,10 +106,14 @@ window.__taReady = true;
     var buyers = Math.round(state.followers * state.convX10 / 1000);
     var sales = buyers * p;
     var yours = Math.round(sales * state.share / 100);
-    out('followers').textContent = state.followers >= 1000000 ? '1M' : Math.round(state.followers / 1000) + 'K';
-    out('conv').textContent = (state.convX10 / 10).toFixed(1) + '%';
+    // Indonesian uses 'rb' and 'jt' (in Indonesia 'M' means a billion) and a decimal comma.
+    var isID = window.taLang === 'id';
+    var k = Math.round(state.followers / 1000);
+    out('followers').textContent = state.followers >= 1000000 ? (isID ? '1 jt' : '1M') : k + (isID ? ' rb' : 'K');
+    var conversion = (state.convX10 / 10).toFixed(1);
+    out('conv').textContent = (isID ? conversion.replace('.', ',') : conversion) + '%';
     out('price').textContent = money(p);
-    out('buyers').textContent = buyers.toLocaleString('en-US');
+    out('buyers').textContent = buyers.toLocaleString(isID ? 'id-ID' : 'en-US');
     out('sales').textContent = money(sales);
     out('yours').textContent = money(yours);
     out('share').textContent = state.share + '%';
@@ -77,5 +136,6 @@ window.__taReady = true;
   buttons.forEach(function (b) {
     b.addEventListener('click', function () { state.currency = b.getAttribute('data-cur'); render(); });
   });
+  document.addEventListener('ta:lang', render);
   render();
 })();

@@ -12,25 +12,32 @@
 document.documentElement.classList.add('js');
 setTimeout(function () { if (!window.__taReady) document.documentElement.classList.remove('js'); }, 2500);
 </script>
+<script src="copy-id.js" defer></script>
 <script src="script.js" defer></script>
 </head>
 <body>
 <div style="background: #0A0A0A; color: #F5F5F5; font-family: 'Inter', system-ui, sans-serif; font-optical-sizing: auto; overflow-x: clip">
 
 <header style="position: sticky; top: 0; z-index: 10; background: rgba(10,10,10,0.92); border-bottom: 1px solid #1F1F1F">
-<nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
-<a href="#top" style="display: flex; align-items: center; gap: 10px; color: #F5F5F5">
+<nav class="site-nav" aria-label="Main" data-i18n-aria="aria.nav" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#top" class="nav-logo" style="display: flex; align-items: center; gap: 10px; color: #F5F5F5">
 <span style="font-size: 22px; font-weight: 800; letter-spacing: -0.03em">ThinkAct</span>
 <span style="width: 7px; height: 7px; background: #9B7BFF; display: inline-block"></span>
 <span class="nav-studio" style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3">STUDIO</span>
 </a>
 <div class="nav-links" style="display: flex; gap: 32px; font-family: 'Instrument Sans', sans-serif; font-size: 15px">
-<a href="#how" style="color: #A3A3A3">How it works</a>
-<a href="#build" style="color: #A3A3A3">What we build</a>
-<a href="#math" style="color: #A3A3A3">The math</a>
+<a href="#how" style="color: #A3A3A3"><span data-i18n="nav.how">How it works</span></a>
+<a href="#build" style="color: #A3A3A3"><span data-i18n="nav.build">What we build</span></a>
+<a href="#math" style="color: #A3A3A3"><span data-i18n="nav.math">The math</span></a>
 <a href="#faq" style="color: #A3A3A3">FAQ</a>
 </div>
-<a href="#contact" class="nav-cta" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 15px; padding: 0 20px; height: 44px; display: inline-flex; align-items: center; border-radius: 999px; flex-shrink: 0">Partner with us</a>
+<div class="nav-right">
+<div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="aria.language">
+<button type="button" data-lang="en" aria-pressed="true">EN</button>
+<button type="button" data-lang="id" aria-pressed="false">ID</button>
+</div>
+<a href="#contact" class="nav-cta" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 15px; padding: 0 20px; height: 44px; display: inline-flex; align-items: center; border-radius: 999px; flex-shrink: 0"><span data-i18n="cta.partner">Partner with us</span></a>
+</div>
 </nav>
 </header>
 
@@ -38,30 +45,30 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div style="flex: 1 1 520px; min-width: 0">
 <div style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
 <span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span>DIGITAL PRODUCT STUDIO FOR CREATORS</span>
+<span><span data-i18n="hero.eyebrow">DIGITAL PRODUCT STUDIO FOR CREATORS</span></span>
 </div>
-<h1 style="margin: 28px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(46px, 6vw, 88px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 300">You make the content. <span style="color: #9B7BFF">We turn it into a product.</span></h1>
-<p style="margin: 32px 0 0; font-size: 20px; line-height: 1.55; color: #A3A3A3; max-width: 520px">We build digital products around your content. You review, share, and earn from every sale.</p>
+<h1 style="margin: 28px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(46px, 6vw, 88px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 300"><span data-i18n="hero.h1a">You make the content.</span> <span style="color: #9B7BFF"><span data-i18n="hero.h1b">We turn it into a product.</span></span></h1>
+<p style="margin: 32px 0 0; font-size: 20px; line-height: 1.55; color: #A3A3A3; max-width: 520px"><span data-i18n="hero.lead">We build digital products around your content. You review, share, and earn from every sale.</span></p>
 <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#contact" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px">Partner with us
+<a href="#contact" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px"><span data-i18n="cta.partner">Partner with us</span>
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
 </a>
-<a href="#how" style="border: 1px solid #333333; color: #F5F5F5; font-family: 'Instrument Sans', sans-serif; font-weight: 500; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; border-radius: 999px">How it works</a>
+<a href="#how" style="border: 1px solid #333333; color: #F5F5F5; font-family: 'Instrument Sans', sans-serif; font-weight: 500; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; border-radius: 999px"><span data-i18n="nav.how">How it works</span></a>
 </div>
 <div style="margin-top: 56px; padding-top: 24px; border-top: 1px solid #1F1F1F; display: flex; flex-wrap: wrap; gap: 12px 32px; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.12em; color: #8A8A8A">
-<span>REVENUE SHARE</span>
-<span>NO UPFRONT FEE</span>
-<span>INDONESIA + INTERNATIONAL</span>
+<span><span data-i18n="hero.trust1">REVENUE SHARE</span></span>
+<span><span data-i18n="hero.trust2">NO UPFRONT FEE</span></span>
+<span><span data-i18n="hero.trust3">INDONESIA + INTERNATIONAL</span></span>
 </div>
 </div>
 
 <div style="flex: 1 1 440px; min-width: 0; display: flex; justify-content: center">
 <div aria-hidden="true" class="hero-visual" style="position: relative; width: 100%; max-width: 520px; height: 600px">
 <div class="hero-cover" style="position: absolute; top: 28px; right: 0; width: 190px; aspect-ratio: 3 / 4; box-sizing: border-box; background: #F5F5F5; color: #0A0A0A; border-radius: 12px; overflow: hidden; transform: rotate(6deg); display: flex; flex-direction: column; box-shadow: 0 30px 60px rgba(0,0,0,0.55)">
-<div class="hero-cover-photo"><img src="images/hard-way-guide.jpg" alt=""><span class="cover-tag">PDF GUIDE</span></div>
+<div class="hero-cover-photo"><img src="images/hard-way-guide.jpg" alt=""><span class="cover-tag"><span data-i18n="mock.pdf">PDF GUIDE</span></span></div>
 <div style="flex: 1; padding: 12px 16px 14px; display: flex; flex-direction: column; justify-content: space-between">
-<div class="hero-cover-title" style="font-family: 'Newsreader', Georgia, serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; line-height: 1.02">I Learned It the Hard Way</div>
-<div style="font-size: 11px; color: #525252">with ThinkAct Studio</div>
+<div class="hero-cover-title" style="font-family: 'Newsreader', Georgia, serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; line-height: 1.02"><span data-i18n="product.hardway">I Learned It the Hard Way</span></div>
+<div style="font-size: 11px; color: #525252"><span data-i18n="mock.with">with ThinkAct Studio</span></div>
 </div>
 </div>
 <div class="hero-phone" style="position: absolute; top: 0; left: 0; width: 280px; height: 580px; box-sizing: border-box; background: #050505; border: 1px solid #333333; border-radius: 44px; padding: 10px; box-shadow: 0 40px 80px rgba(0,0,0,0.6)">
@@ -71,28 +78,28 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 </div>
 <div class="phone-cover">
 <img src="images/weeknight-kitchen.jpg" alt="">
-<span class="cover-tag">RECIPE GUIDE</span>
-<div class="phone-cover-title">Weeknight Kitchen</div>
+<span class="cover-tag"><span data-i18n="mock.recipe">RECIPE GUIDE</span></span>
+<div class="phone-cover-title"><span data-i18n="product.kitchen">Weeknight Kitchen</span></div>
 </div>
 <div style="padding: 18px 18px 0">
-<div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em">Weeknight Kitchen</div>
-<div style="margin-top: 4px; font-size: 13px; color: #525252">by ThinkAct Studio</div>
+<div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em"><span data-i18n="product.kitchen">Weeknight Kitchen</span></div>
+<div style="margin-top: 4px; font-size: 13px; color: #525252"><span data-i18n="mock.by">by ThinkAct Studio</span></div>
 <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: #262626">
-<div style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; background: #6D4AFF; display: inline-block"></span>Quick breakfasts</div>
-<div style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; background: #6D4AFF; display: inline-block"></span>15-minute dinners</div>
-<div style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; background: #6D4AFF; display: inline-block"></span>Weekly meal prep</div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; background: #6D4AFF; display: inline-block"></span><span data-i18n="mock.item1">Quick breakfasts</span></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; background: #6D4AFF; display: inline-block"></span><span data-i18n="mock.item2">15-minute dinners</span></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; background: #6D4AFF; display: inline-block"></span><span data-i18n="mock.item3">Weekly meal prep</span></div>
 </div>
 </div>
 <div style="margin-top: auto; padding: 16px 18px 22px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #E5E5E5">
 <span style="font-size: 18px; font-weight: 700">Rp49.000</span>
-<span style="background: #0A0A0A; color: #F5F5F5; font-size: 14px; font-weight: 600; height: 40px; padding: 0 18px; display: inline-flex; align-items: center; border-radius: 999px">Buy now</span>
+<span style="background: #0A0A0A; color: #F5F5F5; font-size: 14px; font-weight: 600; height: 40px; padding: 0 18px; display: inline-flex; align-items: center; border-radius: 999px"><span data-i18n="mock.buy">Buy now</span></span>
 </div>
 </div>
 </div>
 <div class="hero-report" style="position: absolute; right: 0; bottom: 8px; width: 260px; box-sizing: border-box; background: #141414; border: 1px solid #2C2C2C; border-radius: 16px; padding: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.55)">
 <div style="display: flex; justify-content: space-between; align-items: center">
-<span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.14em; color: #A3A3A3">MONTHLY REPORT</span>
-<span style="font-family: 'Inter', sans-serif; font-size: 9px; letter-spacing: 0.12em; color: #A3A3A3; border: 1px solid #333333; border-radius: 999px; padding: 3px 8px">EXAMPLE</span>
+<span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="mock.report">MONTHLY REPORT</span></span>
+<span style="font-family: 'Inter', sans-serif; font-size: 9px; letter-spacing: 0.12em; color: #A3A3A3; border: 1px solid #333333; border-radius: 999px; padding: 3px 8px"><span data-i18n="mock.example">EXAMPLE</span></span>
 </div>
 <div style="margin-top: 18px; height: 88px; display: flex; align-items: flex-end; gap: 8px">
 <div style="flex: 1; height: 30%; background: #2C2350; border-radius: 4px"></div>
@@ -103,10 +110,10 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div style="flex: 1; height: 100%; background: #9B7BFF; border-radius: 4px"></div>
 </div>
 <div style="margin-top: 8px; display: flex; justify-content: space-between; font-family: 'Inter', sans-serif; font-size: 9px; color: #8A8A8A">
-<span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span><span>OCT</span>
+<span><span data-i18n="month.may">MAY</span></span><span>JUN</span><span>JUL</span><span><span data-i18n="month.aug">AUG</span></span><span>SEP</span><span><span data-i18n="month.oct">OCT</span></span>
 </div>
 <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #262626; display: flex; justify-content: space-between; align-items: baseline">
-<span style="font-size: 12px; color: #A3A3A3">Your share</span>
+<span style="font-size: 12px; color: #A3A3A3"><span data-i18n="share.label">Your share</span></span>
 <span style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em">Rp3.136.000</span>
 </div>
 </div>
@@ -118,16 +125,16 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
 <div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
 <span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span>WHY WE BUILT THINKACT</span>
+<span><span data-i18n="why.eyebrow">WHY WE BUILT THINKACT</span></span>
 </div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(36px, 4.8vw, 66px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 300; max-width: 940px">Creators give a lot. <span style="color: #8A8A8A">Most get little back.</span></h2>
-<p data-reveal style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 560px">The way most creators earn today isn't built to last.</p>
+<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(36px, 4.8vw, 66px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 300; max-width: 940px"><span data-i18n="why.h2a">Creators give a lot.</span> <span style="color: #8A8A8A"><span data-i18n="why.h2b">Most get little back.</span></span></h2>
+<p data-reveal style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 560px"><span data-i18n="why.lead">The way most creators earn today isn't built to last.</span></p>
 
 <div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 20px">
 
 <div style="flex: 1 1 300px; min-width: 0; box-sizing: border-box; background: #141414; border: 1px solid #262626; border-radius: 16px; overflow: hidden">
 <div aria-hidden="true" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; position: relative">
-<span style="position: absolute; top: 24px; right: 24px; font-size: 11px; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #333333; border-radius: 999px; padding: 5px 10px">CAMPAIGN ENDED</span>
+<span style="position: absolute; top: 24px; right: 24px; font-size: 11px; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #333333; border-radius: 999px; padding: 5px 10px"><span data-i18n="why.c1tag">CAMPAIGN ENDED</span></span>
 <div style="height: 110px; display: flex; align-items: flex-end; gap: 6px">
 <div style="flex: 1; height: 62%; background: #3A3A3A; border-radius: 3px"></div>
 <div style="flex: 1; height: 12%; background: #3A3A3A; border-radius: 3px"></div>
@@ -140,12 +147,12 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div style="flex: 1; height: 6%; background: #3A3A3A; border-radius: 3px"></div>
 <div style="flex: 1; height: 18%; background: #3A3A3A; border-radius: 3px"></div>
 </div>
-<div style="margin-top: 12px; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A">INCOME FROM BRAND DEALS</div>
+<div style="margin-top: 12px; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A"><span data-i18n="why.c1chart">INCOME FROM BRAND DEALS</span></div>
 </div>
 <div style="padding: 28px">
 <div style="font-size: 13px; letter-spacing: 0.14em; color: #9B7BFF">01</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1">Brand deals come and go</h3>
-<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #A3A3A3">Most income depends on endorsements. When the campaigns stop, so does the money.</p>
+<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1"><span data-i18n="why.c1title">Brand deals come and go</span></h3>
+<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #A3A3A3"><span data-i18n="why.c1body">Most income depends on endorsements. When the campaigns stop, so does the money.</span></p>
 </div>
 </div>
 
@@ -158,17 +165,17 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div style="height: 7px; width: 60%; background: #0A0A0A; border-radius: 3px"></div>
 <div style="margin-top: 6px; height: 5px; width: 38%; background: #A3A3A3; border-radius: 3px"></div>
 </div>
-<span style="font-size: 11px; font-weight: 600; color: #525252">Shop</span>
+<span style="font-size: 11px; font-weight: 600; color: #525252"><span data-i18n="why.shop">Shop</span></span>
 </div>
 <div style="margin-top: 14px; height: 76px; box-sizing: border-box; border: 1.5px dashed #A3A3A3; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13px; color: #525252">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>No products yet
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg><span data-i18n="why.noproducts">No products yet</span>
 </div>
 </div>
 </div>
 <div style="padding: 28px">
 <div style="font-size: 13px; letter-spacing: 0.14em; color: #9B7BFF">02</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1">Nothing of your own to sell</h3>
-<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #A3A3A3">Your audience trusts you and wants more, but there's nothing for them to buy.</p>
+<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1"><span data-i18n="why.c2title">Nothing of your own to sell</span></h3>
+<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #A3A3A3"><span data-i18n="why.c2body">Your audience trusts you and wants more, but there's nothing for them to buy.</span></p>
 </div>
 </div>
 
@@ -177,22 +184,22 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div style="position: relative; width: 224px; height: 150px">
 <div style="position: absolute; left: 0; top: 16px; width: 100px; height: 128px; box-sizing: border-box; background: #262626; border-radius: 10px; padding: 10px; transform: rotate(-8deg); display: flex; flex-direction: column; justify-content: space-between">
 <svg width="14" height="14" viewBox="0 0 24 24" fill="#A3A3A3"><path d="M8 5.5v13l11-6.5z"></path></svg>
-<span style="align-self: flex-start; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #444444; border-radius: 999px; padding: 3px 7px">FREE</span>
+<span style="align-self: flex-start; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #444444; border-radius: 999px; padding: 3px 7px"><span data-i18n="why.free">FREE</span></span>
 </div>
 <div style="position: absolute; left: 62px; top: 6px; width: 100px; height: 128px; box-sizing: border-box; background: #1F1F1F; border: 1px solid #333333; border-radius: 10px; padding: 10px; transform: rotate(-2deg); display: flex; flex-direction: column; justify-content: space-between">
 <svg width="14" height="14" viewBox="0 0 24 24" fill="#A3A3A3"><path d="M8 5.5v13l11-6.5z"></path></svg>
-<span style="align-self: flex-start; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #444444; border-radius: 999px; padding: 3px 7px">FREE</span>
+<span style="align-self: flex-start; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #444444; border-radius: 999px; padding: 3px 7px"><span data-i18n="why.free">FREE</span></span>
 </div>
 <div style="position: absolute; left: 124px; top: 0; width: 100px; height: 128px; box-sizing: border-box; background: #F5F5F5; border-radius: 10px; padding: 10px; transform: rotate(6deg); display: flex; flex-direction: column; justify-content: space-between">
 <svg width="14" height="14" viewBox="0 0 24 24" fill="#0A0A0A"><path d="M8 5.5v13l11-6.5z"></path></svg>
-<span style="align-self: flex-start; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; color: #0A0A0A; border: 1px solid #A3A3A3; border-radius: 999px; padding: 3px 7px">FREE</span>
+<span style="align-self: flex-start; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; color: #0A0A0A; border: 1px solid #A3A3A3; border-radius: 999px; padding: 3px 7px"><span data-i18n="why.free">FREE</span></span>
 </div>
 </div>
 </div>
 <div style="padding: 28px">
 <div style="font-size: 13px; letter-spacing: 0.14em; color: #9B7BFF">03</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1">Endless content, little in return</h3>
-<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #A3A3A3">You post every day and share your best ideas for free. The value goes to the platform, not to you.</p>
+<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1"><span data-i18n="why.c3title">Endless content, little in return</span></h3>
+<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #A3A3A3"><span data-i18n="why.c3body">You post every day and share your best ideas for free. The value goes to the platform, not to you.</span></p>
 </div>
 </div>
 
@@ -201,10 +208,10 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div style="margin-top: 112px; padding-top: 72px; border-top: 1px solid #1F1F1F">
 <div data-reveal style="font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
 <span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span>OUR ANSWER</span>
+<span><span data-i18n="answer.eyebrow">OUR ANSWER</span></span>
 </div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(36px, 4.8vw, 66px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 300; max-width: 960px">That's why we help you build <span style="color: #9B7BFF">your own product.</span></h2>
-<p data-reveal style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 600px">We turn what you already know into something your audience can buy. They get real value, and you get income you own.</p>
+<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(36px, 4.8vw, 66px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 300; max-width: 960px"><span data-i18n="answer.h2a">That's why we help you build</span> <span style="color: #9B7BFF"><span data-i18n="answer.h2b">your own product.</span></span></h2>
+<p data-reveal style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 600px"><span data-i18n="answer.lead">We turn what you already know into something your audience can buy. They get real value, and you get income you own.</span></p>
 </div>
 <div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 32px">
 <figure style="margin: 0; flex: 2 1 380px; min-width: 0">
@@ -216,18 +223,18 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div class="post"><img src="images/post-fried-egg.jpg" alt="" loading="lazy"><svg class="post-play" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5.5v13l11-6.5z"></path></svg></div>
 <div class="post"><img src="images/post-rice-bowl.jpg" alt="" loading="lazy"><svg class="post-play" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5.5v13l11-6.5z"></path></svg></div>
 </div>
-<figcaption style="margin-top: 16px; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #8A8A8A">YOUR CONTENT</figcaption>
+<figcaption style="margin-top: 16px; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #8A8A8A"><span data-i18n="answer.content">YOUR CONTENT</span></figcaption>
 </figure>
 <div aria-hidden="true" class="flow-arrow" style="flex: 0 0 auto; width: 64px; height: 64px; border-radius: 999px; border: 1px solid #333333; display: flex; align-items: center; justify-content: center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
 </div>
 <figure style="margin: 0; flex: 1 1 260px; min-width: 0; max-width: 360px">
 <div aria-hidden="true" style="aspect-ratio: 4 / 5; box-sizing: border-box; background: #F5F5F5; color: #0A0A0A; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 30px 60px rgba(0,0,0,0.5)">
-<div style="display: flex; justify-content: space-between; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; color: #525252"><span>DIGITAL GUIDE</span><span style="width: 8px; height: 8px; background: #6D4AFF; display: inline-block"></span></div>
-<div style="font-family: 'Newsreader', Georgia, serif; font-size: 42px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.04">Your know-how, in one guide.</div>
-<div style="font-size: 13px; color: #525252">by ThinkAct Studio</div>
+<div style="display: flex; justify-content: space-between; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; color: #525252"><span><span data-i18n="answer.guide">DIGITAL GUIDE</span></span><span style="width: 8px; height: 8px; background: #6D4AFF; display: inline-block"></span></div>
+<div style="font-family: 'Newsreader', Georgia, serif; font-size: 42px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.04"><span data-i18n="answer.knowhow">Your know-how, in one guide.</span></div>
+<div style="font-size: 13px; color: #525252"><span data-i18n="mock.by">by ThinkAct Studio</span></div>
 </div>
-<figcaption style="margin-top: 16px; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #8A8A8A">YOUR PRODUCT</figcaption>
+<figcaption style="margin-top: 16px; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #8A8A8A"><span data-i18n="answer.product">YOUR PRODUCT</span></figcaption>
 </figure>
 </div>
 </div>
@@ -237,9 +244,9 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
 <div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #525252; display: flex; align-items: center; gap: 10px">
 <span style="width: 8px; height: 8px; background: #6D4AFF; display: inline-block; flex-shrink: 0"></span>
-<span>HOW IT WORKS</span>
+<span><span data-i18n="how.eyebrow">HOW IT WORKS</span></span>
 </div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 300">Three steps. Most of them are ours.</h2>
+<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 300"><span data-i18n="how.h2">Three steps. Most of them are ours.</span></h2>
 <div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 48px 24px">
 
 <div style="flex: 1 1 300px; min-width: 0">
@@ -254,8 +261,8 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 </div>
 </div>
 <div style="margin-top: 28px; font-family: 'Inter', sans-serif; font-size: 14px; color: #6D4AFF; font-weight: 500">01</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 400; letter-spacing: -0.015em">We build it</h3>
-<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #404040">We write and design a product that sounds like you.</p>
+<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 400; letter-spacing: -0.015em"><span data-i18n="how.s1title">We build it</span></h3>
+<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #404040"><span data-i18n="how.s1body">We write and design a product that sounds like you.</span></p>
 </div>
 
 <div style="flex: 1 1 300px; min-width: 0">
@@ -266,15 +273,15 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div style="height: 5px; width: 90%; background: #0A0A0A; border-radius: 2px"></div>
 <div style="margin-top: 4px; height: 5px; width: 60%; background: #6D4AFF; border-radius: 2px"></div>
 </div>
-<div style="align-self: center; font-size: 10px; font-weight: 600; color: #0A0A0A; background: #F5F5F5; border-radius: 999px; padding: 5px 10px">Link in bio</div>
+<div style="align-self: center; font-size: 10px; font-weight: 600; color: #0A0A0A; background: #F5F5F5; border-radius: 999px; padding: 5px 10px"><span data-i18n="how.linkbio">Link in bio</span></div>
 </div>
 <div style="position: absolute; top: 24px; left: 24px; display: inline-flex; align-items: center; gap: 6px; background: #FFFFFF; border: 1px solid #E2E2E2; border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 600">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6D4AFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Approved
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6D4AFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.approved">Approved</span>
 </div>
 </div>
 <div style="margin-top: 28px; font-family: 'Inter', sans-serif; font-size: 14px; color: #6D4AFF; font-weight: 500">02</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 400; letter-spacing: -0.015em">You review and share</h3>
-<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #404040">Approve the draft, then tell your audience about it.</p>
+<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 400; letter-spacing: -0.015em"><span data-i18n="how.s2title">You review and share</span></h3>
+<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #404040"><span data-i18n="how.s2body">Approve the draft, then tell your audience about it.</span></p>
 </div>
 
 <div style="flex: 1 1 300px; min-width: 0">
@@ -292,26 +299,26 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 </div>
 </div>
 <div style="margin-top: 28px; font-family: 'Inter', sans-serif; font-size: 14px; color: #6D4AFF; font-weight: 500">03</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 400; letter-spacing: -0.015em">We sell and report</h3>
-<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #404040">We run the store and send you a sales report every month.</p>
+<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 400; letter-spacing: -0.015em"><span data-i18n="how.s3title">We sell and report</span></h3>
+<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #404040"><span data-i18n="how.s3body">We run the store and send you a sales report every month.</span></p>
 </div>
 
 </div>
 <div data-stagger style="margin-top: 80px; display: flex; flex-wrap: wrap; gap: 20px">
 <div class="pad-card" style="flex: 2 1 420px; box-sizing: border-box; background: #0A0A0A; color: #F5F5F5; border-radius: 16px; padding: 40px">
-<div style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3">THINKACT HANDLES</div>
+<div style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="how.ours">THINKACT HANDLES</span></div>
 <ul style="list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 18px; font-size: 21px; font-weight: 500">
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Research and writing</li>
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Design and layout</li>
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Store page and checkout</li>
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Monthly sales reports</li>
+<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.ours1">Research and writing</span></li>
+<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.ours2">Design and layout</span></li>
+<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.ours3">Store page and checkout</span></li>
+<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.ours4">Monthly sales reports</span></li>
 </ul>
 </div>
 <div class="pad-card" style="flex: 1 1 300px; box-sizing: border-box; border: 1px solid #D4D4D4; border-radius: 16px; padding: 40px">
-<div style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #525252">YOU HANDLE</div>
+<div style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #525252"><span data-i18n="how.yours">YOU HANDLE</span></div>
 <ul style="list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 18px; font-size: 21px; font-weight: 500">
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Reviewing the content</li>
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Sharing it with your audience</li>
+<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.yours1">Reviewing the content</span></li>
+<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.yours2">Sharing it with your audience</span></li>
 </ul>
 </div>
 </div>
@@ -321,27 +328,27 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <section id="build" class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
 <div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
 <span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span>WHAT WE BUILD</span>
+<span><span data-i18n="build.eyebrow">WHAT WE BUILD</span></span>
 </div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 300; max-width: 900px">Products that fit your persona, not a template.</h2>
+<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 300; max-width: 900px"><span data-i18n="build.h2">Products that fit your persona, not a template.</span></h2>
 <div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 40px 20px">
 
 <div style="flex: 1 1 250px; min-width: 0">
 <div aria-hidden="true" class="cover" style="background: #F5F5F5;">
-<div class="cover-photo"><img src="images/weeknight-kitchen.jpg" alt="" loading="lazy"><span class="cover-tag">RECIPE GUIDE</span></div>
-<div class="cover-body"><div class="cover-title" style="color: #0A0A0A">Weeknight Kitchen</div></div>
+<div class="cover-photo"><img src="images/weeknight-kitchen.jpg" alt="" loading="lazy"><span class="cover-tag"><span data-i18n="mock.recipe">RECIPE GUIDE</span></span></div>
+<div class="cover-body"><div class="cover-title" style="color: #0A0A0A"><span data-i18n="product.kitchen">Weeknight Kitchen</span></div></div>
 </div>
-<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">Recipe guides</h3>
-<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3">Your signature recipes, beautifully laid out.</p>
+<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="build.recipes">Recipe guides</span></h3>
+<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3"><span data-i18n="build.recipesBody">Your signature recipes, beautifully laid out.</span></p>
 </div>
 
 <div style="flex: 1 1 250px; min-width: 0">
 <div aria-hidden="true" class="cover" style="background: #141414; border: 1px solid #262626;">
 <div class="cover-photo"><img src="images/starter-playbook.jpg" alt="" loading="lazy"><span class="cover-tag">PLAYBOOK</span></div>
-<div class="cover-body"><div class="cover-title" style="color: #F5F5F5">30-Day Starter Playbook</div></div>
+<div class="cover-body"><div class="cover-title" style="color: #F5F5F5"><span data-i18n="build.starter">30-Day Starter Playbook</span></div></div>
 </div>
-<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">Guides and playbooks</h3>
-<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3">Step-by-step know-how from your niche.</p>
+<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="build.guides">Guides and playbooks</span></h3>
+<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3"><span data-i18n="build.guidesBody">Step-by-step know-how from your niche.</span></p>
 </div>
 
 <div style="flex: 1 1 250px; min-width: 0">
@@ -349,17 +356,17 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div class="cover-photo"><img src="images/content-planner.jpg" alt="" loading="lazy"><span class="cover-tag">TEMPLATE</span></div>
 <div class="cover-body"><div class="cover-title" style="color: #0A0A0A">Content Planner</div></div>
 </div>
-<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">Templates and checklists</h3>
-<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3">Tools your audience can use the same day.</p>
+<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="build.templates">Templates and checklists</span></h3>
+<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3"><span data-i18n="build.templatesBody">Tools your audience can use the same day.</span></p>
 </div>
 
 <div style="flex: 1 1 250px; min-width: 0">
 <div aria-hidden="true" class="cover" style="background: #17122B; border: 1px solid #2C2350;">
-<div class="cover-photo"><img src="images/hard-way-guide.jpg" alt="" loading="lazy"><span class="cover-tag">PERSONALITY-LED</span></div>
-<div class="cover-body"><div class="cover-title" style="color: #9B7BFF">I Learned It the Hard Way</div></div>
+<div class="cover-photo"><img src="images/hard-way-guide.jpg" alt="" loading="lazy"><span class="cover-tag"><span data-i18n="build.personalTag">PERSONALITY-LED</span></span></div>
+<div class="cover-body"><div class="cover-title" style="color: #9B7BFF"><span data-i18n="product.hardway">I Learned It the Hard Way</span></div></div>
 </div>
-<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">Personality-led products</h3>
-<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3">Funny, honest and unmistakably you.</p>
+<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="build.personal">Personality-led products</span></h3>
+<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3"><span data-i18n="build.personalBody">Funny, honest and unmistakably you.</span></p>
 </div>
 
 </div>
@@ -369,43 +376,43 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
 <div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
 <span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span>THE MATH</span>
+<span><span data-i18n="math.eyebrow">THE MATH</span></span>
 </div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 300; max-width: 900px">See what one product could earn you.</h2>
-<p data-reveal style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 600px">Move the sliders for a rough estimate. Real results depend on your audience and your launch.</p>
+<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 300; max-width: 900px"><span data-i18n="math.h2">See what one product could earn you.</span></h2>
+<p data-reveal style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 600px"><span data-i18n="math.lead">Move the sliders for a rough estimate. Real results depend on your audience and your launch.</span></p>
 <div data-stagger style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 20px">
 <div class="pad-card" style="flex: 3 1 460px; min-width: 0; box-sizing: border-box; background: #141414; border: 1px solid #262626; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 40px">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<span style="font-size: 17px; font-weight: 500">Currency</span>
-<div role="group" aria-label="Currency" style="display: inline-flex; border: 1px solid #333333; border-radius: 999px; padding: 4px; gap: 4px">
+<span style="font-size: 17px; font-weight: 500"><span data-i18n="math.currency">Currency</span></span>
+<div role="group" aria-label="Currency" data-i18n-aria="aria.currency" style="display: inline-flex; border: 1px solid #333333; border-radius: 999px; padding: 4px; gap: 4px">
 <button type="button" aria-pressed="true" data-cur="IDR" style="border: 0; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.08em; height: 44px; padding: 0 20px; border-radius: 999px; background: #F5F5F5; color: #0A0A0A">RUPIAH</button>
 <button type="button" aria-pressed="false" data-cur="USD" style="border: 0; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.08em; height: 44px; padding: 0 20px; border-radius: 999px; background: transparent; color: #A3A3A3">USD</button>
 </div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
-<label for="ta-followers" style="font-size: 17px; font-weight: 500">Your followers</label>
+<label for="ta-followers" style="font-size: 17px; font-weight: 500"><span data-i18n="math.followers">Your followers</span></label>
 <span style="font-family: 'Inter', sans-serif; font-size: 17px; color: #F5F5F5"><span data-out="followers">100K</span></span>
 </div>
 <input id="ta-followers" type="range" min="10000" max="1000000" step="10000" value="100000" style="width: 100%; height: 28px; margin: 0; cursor: pointer; accent-color: #9B7BFF">
 </div>
 <div style="display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
-<label for="ta-conv" style="font-size: 17px; font-weight: 500">Followers who buy</label>
+<label for="ta-conv" style="font-size: 17px; font-weight: 500"><span data-i18n="math.conv">Followers who buy</span></label>
 <span style="font-family: 'Inter', sans-serif; font-size: 17px; color: #F5F5F5"><span data-out="conv">1.0%</span></span>
 </div>
 <input id="ta-conv" type="range" min="2" max="30" step="1" value="10" style="width: 100%; height: 28px; margin: 0; cursor: pointer; accent-color: #9B7BFF">
 </div>
 <div style="display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
-<label for="ta-price" style="font-size: 17px; font-weight: 500">Product price</label>
+<label for="ta-price" style="font-size: 17px; font-weight: 500"><span data-i18n="math.price">Product price</span></label>
 <span style="font-family: 'Inter', sans-serif; font-size: 17px; color: #F5F5F5"><span data-out="price">Rp49.000</span></span>
 </div>
 <input id="ta-price" type="range" min="15000" max="199000" step="1000" value="49000" style="width: 100%; height: 28px; margin: 0; cursor: pointer; accent-color: #9B7BFF">
 </div>
 <div style="display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
-<label for="ta-share" style="font-size: 17px; font-weight: 500">Your share</label>
+<label for="ta-share" style="font-size: 17px; font-weight: 500"><span data-i18n="share.label">Your share</span></label>
 <span style="font-family: 'Inter', sans-serif; font-size: 17px; color: #F5F5F5"><span data-out="sharePick">50%</span></span>
 </div>
 <input id="ta-share" type="range" min="50" max="70" step="5" value="50" style="width: 100%; height: 28px; margin: 0; cursor: pointer; accent-color: #9B7BFF">
@@ -414,19 +421,19 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div class="pad-card" style="flex: 2 1 340px; min-width: 0; box-sizing: border-box; background: #17122B; border: 1px solid #2C2350; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
 <div style="display: flex; flex-direction: column; gap: 28px">
 <div>
-<div style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3">ESTIMATED BUYERS</div>
+<div style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="math.buyers">ESTIMATED BUYERS</span></div>
 <div style="margin-top: 8px; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums"><span data-out="buyers">1,000</span></div>
 </div>
 <div>
-<div style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3">TOTAL SALES</div>
+<div style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="math.sales">TOTAL SALES</span></div>
 <div style="margin-top: 8px; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums"><span data-out="sales">Rp49.000.000</span></div>
 </div>
 <div style="border-top: 1px solid #2C2350; padding-top: 28px">
-<div style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3">YOUR SHARE · <span data-out="share">50%</span></div>
+<div style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="math.share">YOUR SHARE ·</span> <span data-out="share">50%</span></div>
 <div style="margin-top: 8px; font-size: clamp(36px, 4vw, 52px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; font-variant-numeric: tabular-nums; color: #9B7BFF; overflow-wrap: anywhere"><span data-out="yours">Rp24.500.000</span></div>
 </div>
 </div>
-<p style="margin: 0; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.1em; line-height: 1.6; color: #8A8A8A">BEFORE PLATFORM FEES. YOUR EXACT SHARE IS SET IN YOUR AGREEMENT.</p>
+<p style="margin: 0; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.1em; line-height: 1.6; color: #8A8A8A"><span data-i18n="math.note">BEFORE PLATFORM FEES. YOUR EXACT SHARE IS SET IN YOUR AGREEMENT.</span></p>
 </div>
 </div>
 </div>
@@ -439,32 +446,32 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
 <span>FAQ</span>
 </div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 300">Questions creators ask us.</h2>
+<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 300"><span data-i18n="faq.h2">Questions creators ask us.</span></h2>
 </div>
 <div data-stagger style="flex: 2 1 560px; min-width: 0">
 <div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">Do I pay anything upfront?</h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3">No. We only earn when your product sells.</p>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q1">Do I pay anything upfront?</span></h3>
+<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a1">No. We only earn when your product sells.</span></p>
 </div>
 <div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">How much of my time does it take?</h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3">Very little. You review the draft and promote it. We do the rest.</p>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q2">How much of my time does it take?</span></h3>
+<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a2">Very little. You review the draft and promote it. We do the rest.</span></p>
 </div>
 <div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">How do I get paid?</h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3">We sell on Lynk.id, Shopee and TikTok Shop. You get a report of every sale each month.</p>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q3">How do I get paid?</span></h3>
+<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a3">We sell on Lynk.id, Shopee and TikTok Shop. You get a report of every sale each month.</span></p>
 </div>
 <div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">Who owns the product?</h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3">You do. The product belongs to you, not to ThinkAct.</p>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q4">Who owns the product?</span></h3>
+<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a4">You do. The product belongs to you, not to ThinkAct.</span></p>
 </div>
 <div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">How long until launch?</h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3">At least 3–4 weeks from our first call.</p>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q5">How long until launch?</span></h3>
+<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a5">At least 3–4 weeks from our first call.</span></p>
 </div>
 <div style="border-top: 1px solid #262626; border-bottom: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em">My audience isn't in Indonesia. Can we still work together?</h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3">Yes. We work with creators worldwide and sell in USD.</p>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q6">My audience isn't in Indonesia. Can we still work together?</span></h3>
+<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a6">Yes. We work with creators worldwide and sell in USD.</span></p>
 </div>
 </div>
 </div>
@@ -474,15 +481,15 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center">
 <div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
 <span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span>WORK WITH US</span>
+<span><span data-i18n="contact.eyebrow">WORK WITH US</span></span>
 </div>
-<h2 data-reveal style="margin: 28px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(42px, 6.4vw, 94px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 300; max-width: 1000px">Ready to turn your content into <span style="color: #9B7BFF">a product?</span></h2>
-<p data-reveal style="margin: 32px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 520px">Tell us about your content and we'll come back with a product idea.</p>
+<h2 data-reveal style="margin: 28px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(42px, 6.4vw, 94px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 300; max-width: 1000px"><span data-i18n="contact.h2a">Ready to turn your content into</span> <span style="color: #9B7BFF"><span data-i18n="contact.h2b">a product?</span></span></h2>
+<p data-reveal style="margin: 32px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 520px"><span data-i18n="contact.lead">Tell us about your content and we'll come back with a product idea.</span></p>
 <div data-reveal style="margin-top: 44px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
-<a href="https://wa.me/6281211804181" target="_blank" rel="noopener" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px">Chat on WhatsApp
+<a href="https://wa.me/6281211804181" target="_blank" rel="noopener" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px"><span data-i18n="contact.wa">Chat on WhatsApp</span>
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
 </a>
-<a href="mailto:joshuajoelaskoro@gmail.com" style="border: 1px solid #333333; color: #F5F5F5; font-family: 'Instrument Sans', sans-serif; font-weight: 500; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; border-radius: 999px">Email us</a>
+<a href="mailto:joshuajoelaskoro@gmail.com" style="border: 1px solid #333333; color: #F5F5F5; font-family: 'Instrument Sans', sans-serif; font-weight: 500; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; border-radius: 999px"><span data-i18n="contact.email">Email us</span></a>
 </div>
 <p data-reveal style="margin: 32px 0 0; font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.1em; color: #8A8A8A"><a href="https://wa.me/6281211804181" target="_blank" rel="noopener" style="color: inherit">+62 812-1180-4181</a> · <a href="mailto:joshuajoelaskoro@gmail.com" style="color: inherit">joshuajoelaskoro@gmail.com</a> · <a href="https://instagram.com/joshuajoelaskoro" target="_blank" rel="noopener" style="color: inherit">@joshuajoelaskoro</a></p>
 </div>
@@ -493,7 +500,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div style="display: flex; align-items: center; gap: 10px">
 <span style="font-size: 18px; font-weight: 800; letter-spacing: -0.03em; color: #F5F5F5">ThinkAct</span>
 <span style="width: 6px; height: 6px; background: #9B7BFF; display: inline-block"></span>
-<span>Digital products, built with creators.</span>
+<span><span data-i18n="footer.tag">Digital products, built with creators.</span></span>
 </div>
 <span>© 2026 ThinkAct Studio · Jakarta, Indonesia</span>
 </div>
