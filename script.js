@@ -26,6 +26,21 @@ window.__taReady = true;
   targets.forEach(function (el) { io.observe(el); });
 })();
 
+/* ---------- Phone menu ---------- */
+(function () {
+  var toggle = document.querySelector('.menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+  function setOpen(open) {
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  toggle.addEventListener('click', function () { setOpen(menu.hidden); });
+  // Close after picking a section, or with Escape.
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+})();
+
 /* ---------- Language switch (EN / ID) ---------- */
 // English is the text in index.html; Indonesian comes from copy-id.js (window.TA_COPY_ID).
 // The choice comes from ?lang=id, then the visitor's last pick, then the browser language.

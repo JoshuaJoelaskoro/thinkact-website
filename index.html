@@ -37,8 +37,16 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <button type="button" data-lang="id" aria-pressed="false">ID</button>
 </div>
 <a href="#contact" class="nav-cta" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 15px; padding: 0 20px; height: 44px; display: inline-flex; align-items: center; border-radius: 999px; flex-shrink: 0"><span data-i18n="cta.partner">Partner with us</span></a>
+<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu" data-i18n-aria="aria.menu"><span></span><span></span></button>
 </div>
 </nav>
+<div id="mobile-menu" class="mobile-menu" hidden>
+<a href="#how"><span data-i18n="nav.how">How it works</span></a>
+<a href="#build"><span data-i18n="nav.build">What we build</span></a>
+<a href="#math"><span data-i18n="nav.math">The math</span></a>
+<a href="#faq">FAQ</a>
+<a href="#contact" class="mobile-menu-cta"><span data-i18n="cta.partner">Partner with us</span></a>
+</div>
 </header>
 
 <section id="top" class="hero hero-fade" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 112px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px 48px">
@@ -49,7 +57,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 </div>
 <h1 style="margin: 28px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(46px, 6vw, 88px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 300"><span data-i18n="hero.h1a">You make the content.</span> <span style="color: #9B7BFF"><span data-i18n="hero.h1b">We turn it into a product.</span></span></h1>
 <p style="margin: 32px 0 0; font-size: 20px; line-height: 1.55; color: #A3A3A3; max-width: 520px"><span data-i18n="hero.lead">We build digital products around your content. You review, share, and earn from every sale.</span></p>
-<div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px">
+<div class="hero-actions" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px">
 <a href="#contact" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px"><span data-i18n="cta.partner">Partner with us</span>
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
 </a>
@@ -133,7 +141,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 20px">
 
 <div style="flex: 1 1 300px; min-width: 0; box-sizing: border-box; background: #141414; border: 1px solid #262626; border-radius: 16px; overflow: hidden">
-<div aria-hidden="true" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; position: relative">
+<div aria-hidden="true" class="why-art" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; position: relative">
 <span style="position: absolute; top: 24px; right: 24px; font-size: 11px; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #333333; border-radius: 999px; padding: 5px 10px"><span data-i18n="why.c1tag">CAMPAIGN ENDED</span></span>
 <div style="height: 110px; display: flex; align-items: flex-end; gap: 6px">
 <div style="flex: 1; height: 62%; background: #3A3A3A; border-radius: 3px"></div>
@@ -157,7 +165,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 </div>
 
 <div style="flex: 1 1 300px; min-width: 0; box-sizing: border-box; background: #141414; border: 1px solid #262626; border-radius: 16px; overflow: hidden">
-<div aria-hidden="true" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; padding: 28px; display: flex; align-items: center; justify-content: center">
+<div aria-hidden="true" class="why-art" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; padding: 28px; display: flex; align-items: center; justify-content: center">
 <div style="width: 100%; max-width: 260px; box-sizing: border-box; background: #F5F5F5; color: #0A0A0A; border-radius: 12px; padding: 16px">
 <div style="display: flex; align-items: center; gap: 10px">
 <span style="width: 30px; height: 30px; border-radius: 999px; background: #D4D4D4; flex-shrink: 0"></span>
@@ -180,7 +188,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 </div>
 
 <div style="flex: 1 1 300px; min-width: 0; box-sizing: border-box; background: #141414; border: 1px solid #262626; border-radius: 16px; overflow: hidden">
-<div aria-hidden="true" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; display: flex; align-items: center; justify-content: center">
+<div aria-hidden="true" class="why-art" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; display: flex; align-items: center; justify-content: center">
 <div style="position: relative; width: 224px; height: 150px">
 <div style="position: absolute; left: 0; top: 16px; width: 100px; height: 128px; box-sizing: border-box; background: #262626; border-radius: 10px; padding: 10px; transform: rotate(-8deg); display: flex; flex-direction: column; justify-content: space-between">
 <svg width="14" height="14" viewBox="0 0 24 24" fill="#A3A3A3"><path d="M8 5.5v13l11-6.5z"></path></svg>
@@ -228,7 +236,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div aria-hidden="true" class="flow-arrow" style="flex: 0 0 auto; width: 64px; height: 64px; border-radius: 999px; border: 1px solid #333333; display: flex; align-items: center; justify-content: center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
 </div>
-<figure style="margin: 0; flex: 1 1 260px; min-width: 0; max-width: 360px">
+<figure class="answer-product" style="margin: 0; flex: 1 1 260px; min-width: 0; max-width: 360px">
 <div aria-hidden="true" style="aspect-ratio: 4 / 5; box-sizing: border-box; background: #F5F5F5; color: #0A0A0A; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 30px 60px rgba(0,0,0,0.5)">
 <div style="display: flex; justify-content: space-between; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; color: #525252"><span><span data-i18n="answer.guide">DIGITAL GUIDE</span></span><span style="width: 8px; height: 8px; background: #6D4AFF; display: inline-block"></span></div>
 <div style="font-family: 'Newsreader', Georgia, serif; font-size: 42px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.04"><span data-i18n="answer.knowhow">Your know-how, in one guide.</span></div>
@@ -250,7 +258,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 48px 24px">
 
 <div style="flex: 1 1 300px; min-width: 0">
-<div aria-hidden="true" style="height: 240px; box-sizing: border-box; background: #EFEFEF; border: 1px solid #E2E2E2; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<div aria-hidden="true" class="how-art" style="height: 240px; box-sizing: border-box; background: #EFEFEF; border: 1px solid #E2E2E2; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden">
 <div style="width: 64%; height: 190px; box-sizing: border-box; background: #FFFFFF; border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 9px; box-shadow: 0 12px 30px rgba(0,0,0,0.08)">
 <div style="height: 10px; width: 62%; background: #0A0A0A; border-radius: 3px"></div>
 <div style="height: 56px; background: #E4DDFF; border-radius: 6px; margin: 4px 0"></div>
@@ -266,7 +274,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 </div>
 
 <div style="flex: 1 1 300px; min-width: 0">
-<div aria-hidden="true" style="height: 240px; box-sizing: border-box; background: #EFEFEF; border: 1px solid #E2E2E2; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative">
+<div aria-hidden="true" class="how-art" style="height: 240px; box-sizing: border-box; background: #EFEFEF; border: 1px solid #E2E2E2; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative">
 <div style="width: 124px; height: 196px; box-sizing: border-box; background: #0A0A0A; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 30px rgba(0,0,0,0.18)">
 <div style="display: flex; gap: 4px"><div style="flex: 1; height: 3px; background: #F5F5F5; border-radius: 2px"></div><div style="flex: 1; height: 3px; background: #525252; border-radius: 2px"></div></div>
 <div style="align-self: center; width: 70px; height: 88px; box-sizing: border-box; background: #F5F5F5; border-radius: 6px; padding: 8px; display: flex; flex-direction: column; justify-content: flex-end">
@@ -285,7 +293,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 </div>
 
 <div style="flex: 1 1 300px; min-width: 0">
-<div aria-hidden="true" style="height: 240px; box-sizing: border-box; background: #EFEFEF; border: 1px solid #E2E2E2; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<div aria-hidden="true" class="how-art" style="height: 240px; box-sizing: border-box; background: #EFEFEF; border: 1px solid #E2E2E2; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden">
 <div style="width: 70%; box-sizing: border-box; background: #FFFFFF; border-radius: 10px; padding: 18px; box-shadow: 0 12px 30px rgba(0,0,0,0.08)">
 <div style="display: flex; justify-content: space-between; align-items: center"><div style="height: 8px; width: 50%; background: #0A0A0A; border-radius: 3px"></div><div style="height: 8px; width: 18%; background: #D4D4D4; border-radius: 3px"></div></div>
 <div style="margin-top: 18px; height: 100px; display: flex; align-items: flex-end; gap: 8px">
@@ -436,6 +444,12 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 <p style="margin: 0; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.1em; line-height: 1.6; color: #8A8A8A"><span data-i18n="math.note">BEFORE PLATFORM FEES. YOUR EXACT SHARE IS SET IN YOUR AGREEMENT.</span></p>
 </div>
 </div>
+<div data-reveal class="math-cta" style="margin-top: 40px; padding-top: 32px; border-top: 1px solid #1F1F1F; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px">
+<p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(26px, 3vw, 34px); font-weight: 300; letter-spacing: -0.015em; line-height: 1.15"><span data-i18n="math.ctaTitle">Curious what your content could earn?</span></p>
+<a href="https://wa.me/6281211804181" target="_blank" rel="noopener" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px"><span data-i18n="contact.wa">Chat on WhatsApp</span>
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+</a>
+</div>
 </div>
 </section>
 
@@ -485,7 +499,7 @@ setTimeout(function () { if (!window.__taReady) document.documentElement.classLi
 </div>
 <h2 data-reveal style="margin: 28px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(42px, 6.4vw, 94px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 300; max-width: 1000px"><span data-i18n="contact.h2a">Ready to turn your content into</span> <span style="color: #9B7BFF"><span data-i18n="contact.h2b">a product?</span></span></h2>
 <p data-reveal style="margin: 32px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 520px"><span data-i18n="contact.lead">Tell us about your content and we'll come back with a product idea.</span></p>
-<div data-reveal style="margin-top: 44px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
+<div data-reveal class="contact-actions" style="margin-top: 44px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
 <a href="https://wa.me/6281211804181" target="_blank" rel="noopener" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px"><span data-i18n="contact.wa">Chat on WhatsApp</span>
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
 </a>

@@ -1,7 +1,7 @@
 body{margin:0;background:#0A0A0A}
 html{scroll-behavior:smooth}
 a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
-@media (max-width: 760px){.nav-links{display:none !important}}
+@media (max-width: 900px){.nav-links{display:none !important}}
 
 /* ---------- Scroll animations ----------
    Content is only hidden while <html> has the "js" class, which the inline
@@ -59,27 +59,58 @@ a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
 .lang-switch button[aria-pressed="true"]{background:#F5F5F5;color:#0A0A0A}
 .lang-switch button:focus-visible{outline:2px solid #9B7BFF;outline-offset:2px}
 
-/* ---------- Small screens (inline styles need !important) ---------- */
-@media (max-width: 480px){
+/* Outlined and solid buttons share one height (the border counts inside it). */
+.hero-actions a,.contact-actions a{box-sizing:border-box}
+
+/* ---------- Phone menu (section links + main button) ---------- */
+.menu-toggle{display:none}
+.mobile-menu{display:none}
+@media (max-width: 900px){
+  .menu-toggle{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:40px;height:40px;padding:0;border:1px solid #333333;border-radius:999px;background:transparent;cursor:pointer;flex-shrink:0}
+  .menu-toggle span{display:block;width:16px;height:1.5px;background:#F5F5F5;transition:transform .2s ease}
+  .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.75px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.75px) rotate(-45deg)}
+  .menu-toggle:focus-visible{outline:2px solid #9B7BFF;outline-offset:2px}
+  .mobile-menu:not([hidden]){display:flex;flex-direction:column;padding:4px 24px 20px;border-top:1px solid #1F1F1F;max-height:calc(100vh - 60px);overflow-y:auto}
+  .mobile-menu a{display:flex;align-items:center;min-height:52px;border-bottom:1px solid #1F1F1F;font-family:'Instrument Sans',sans-serif;font-size:18px;color:#F5F5F5}
+  .mobile-menu a.mobile-menu-cta{margin-top:16px;border:0;border-radius:999px;justify-content:center;background:#F5F5F5;color:#0A0A0A;font-weight:600;font-size:16px}
+}
+
+/* ---------- Compact header on phones: logo, language switch, menu ---------- */
+@media (max-width: 600px){
   .nav-studio{display:none !important}
-  .site-nav{padding:0 16px !important;gap:10px !important}
+  .nav-cta{display:none !important}  /* the same button is in the menu */
+  .site-nav{padding:0 16px !important;gap:10px !important;height:60px !important}
   .nav-logo{gap:7px !important}
   .nav-logo span:first-child{font-size:19px !important}
   .nav-right{gap:8px}
   .lang-switch{padding:2px}
   .lang-switch button{height:40px;min-width:40px;padding:0 8px;font-size:12px}
-  .nav-cta{padding:0 12px !important;font-size:13px !important;height:40px !important}
+  .mobile-menu:not([hidden]){padding:4px 16px 20px}
+}
+
+/* ---------- Small screens (inline styles need !important) ---------- */
+@media (max-width: 480px){
+  /* Main buttons span the screen, like the reference site, so they are easy to hit. */
+  .hero-actions a,.contact-actions a,.math-cta a{flex:1 1 100%;justify-content:center}
+  .contact-actions{align-self:stretch}
   /* Contact details: one per line, each with a finger-sized tap area. */
   .contact-links{display:flex;flex-direction:column;align-items:center}
   .contact-links .sep{display:none}
   .contact-links a{display:inline-block;padding:12px 8px}
-  .hero{padding:64px 20px 80px !important}
+  .hero{padding:48px 20px 64px !important}
   .hero-visual{height:560px !important;max-width:340px !important}
   .hero-phone{width:250px !important;height:520px !important}
   .hero-cover{width:150px !important;top:40px !important;right:-8px !important}
   .hero-cover-title{font-size:18px !important}
   .hero-report{width:240px !important;right:-8px !important;bottom:0 !important;padding:16px !important}
-  .wrap{padding-left:20px !important;padding-right:20px !important;padding-top:88px !important;padding-bottom:88px !important}
+  /* Less empty space between sections keeps the page shorter on phones. */
+  .wrap{padding-left:20px !important;padding-right:20px !important;padding-top:72px !important;padding-bottom:72px !important}
+  .wrap > [data-stagger]{margin-top:40px !important}
+  .why-art{height:180px !important;padding:20px !important}
+  .how-art{height:200px !important}
+  .how-art > *{transform:scale(.82)}
+  .answer-product{max-width:280px !important;margin:0 auto !important}
   .pad-card{padding:28px 24px !important}
   .flow-arrow{margin:0 auto}
   .flow-arrow svg{transform:rotate(90deg)}
@@ -87,8 +118,4 @@ a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
 /* Touch screens: taller slider hit area so a thumb can grab it. */
 @media (pointer: coarse){
   #math input[type="range"]{height:44px !important}
-}
-/* Very narrow phones: the header can't fit logo, language switch and button; the hero has the same button. */
-@media (max-width: 350px){
-  .nav-cta{display:none !important}
 }

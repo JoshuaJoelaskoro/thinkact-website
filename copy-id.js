@@ -108,6 +108,7 @@ window.TA_COPY_ID = {
   'math.sales': "TOTAL PENJUALAN",
   'math.share': "BAGIANMU ·",
   'math.note': "BELUM TERMASUK BIAYA PLATFORM. PERSENTASE PASTINYA DIATUR DI PERJANJIAN KITA.",
+  'math.ctaTitle': "Penasaran berapa potensi dari kontenmu?",
 
   // FAQ
   'faq.h2': "Pertanyaan yang sering ditanyakan kreator.",
@@ -139,4 +140,5 @@ window.TA_COPY_ID = {
   'aria.nav': "Utama",
   'aria.currency': "Mata uang",
   'aria.language': "Bahasa",
+  'aria.menu': "Menu",
 };
