@@ -1,0 +1,43 @@
+body{margin:0;background:#0A0A0A}
+html{scroll-behavior:smooth}
+a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
+@media (max-width: 760px){.nav-links{display:none !important}}
+
+/* ---------- Scroll animations ----------
+   Content is only hidden while <html> has the "js" class, which the inline
+   script in <head> adds and removes again if script.js never starts. */
+.js [data-reveal],
+.js [data-stagger] > *{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .6s cubic-bezier(.22,.61,.36,1), transform .6s cubic-bezier(.22,.61,.36,1);
+}
+.js [data-reveal].is-visible,
+.js [data-stagger].is-visible > *{
+  opacity:1;
+  transform:none;
+}
+.js .hero-fade{animation:hero-fade .9s ease-out both}
+@keyframes hero-fade{from{opacity:0}to{opacity:1}}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js [data-reveal],
+  .js [data-stagger] > *{opacity:1;transform:none;transition:none}
+  .js .hero-fade{animation:none}
+}
+
+/* ---------- Small screens (inline styles need !important) ---------- */
+@media (max-width: 480px){
+  .nav-studio{display:none !important}
+  .nav-cta{padding:0 16px !important;font-size:14px !important;height:40px !important}
+  .hero{padding:64px 20px 80px !important}
+  .hero-visual{height:560px !important;max-width:340px !important}
+  .hero-phone{width:250px !important;height:520px !important}
+  .hero-cover{width:150px !important;top:40px !important;right:-8px !important}
+  .hero-cover-title{font-size:24px !important}
+  .hero-report{width:240px !important;right:-8px !important;bottom:0 !important;padding:16px !important}
+  .wrap{padding-left:20px !important;padding-right:20px !important;padding-top:88px !important;padding-bottom:88px !important}
+  .pad-card{padding:28px 24px !important}
+  .flow-arrow{transform:rotate(90deg);margin:0 auto}
+}
