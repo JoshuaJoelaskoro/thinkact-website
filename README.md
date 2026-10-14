@@ -17,6 +17,15 @@ ruby -run -e httpd . -p 4321
 - Earnings estimator: creator share is `CREATOR_SHARE` at the top of the estimator in `script.js`.
 - Placeholders still to fill: `[X]` weeks, `[Your ownership terms]`, `[WHATSAPP NUMBER]`, `[EMAIL]`, `[INSTAGRAM]`, `[creator].store`.
 
+## Photos
+
+The product cover photos in `images/` are from Unsplash (free for commercial use under the Unsplash License):
+
+- `weeknight-kitchen.jpg`: ikhsan baihaqi, unsplash.com/photos/RwAXb8Hv_sU
+- `starter-playbook.jpg`: Venti Views, unsplash.com/photos/I1EWTM5mFEM
+- `content-planner.jpg`: Mona Jain, unsplash.com/photos/AJRZMx9XV7M
+- `hard-way-guide.jpg`: Rirri, unsplash.com/photos/p_swqcXUc1k
+
 ## Deploy (Vercel)
 
 1. Push this folder to a GitHub repo.
