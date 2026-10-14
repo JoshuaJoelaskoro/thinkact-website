@@ -67,8 +67,12 @@ a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
   .nav-logo span:first-child{font-size:19px !important}
   .nav-right{gap:8px}
   .lang-switch{padding:2px}
-  .lang-switch button{height:32px;min-width:32px;padding:0 7px;font-size:12px}
-  .nav-cta{padding:0 12px !important;font-size:13px !important;height:38px !important}
+  .lang-switch button{height:40px;min-width:40px;padding:0 8px;font-size:12px}
+  .nav-cta{padding:0 12px !important;font-size:13px !important;height:40px !important}
+  /* Contact details: one per line, each with a finger-sized tap area. */
+  .contact-links{display:flex;flex-direction:column;align-items:center}
+  .contact-links .sep{display:none}
+  .contact-links a{display:inline-block;padding:12px 8px}
   .hero{padding:64px 20px 80px !important}
   .hero-visual{height:560px !important;max-width:340px !important}
   .hero-phone{width:250px !important;height:520px !important}
@@ -79,6 +83,10 @@ a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
   .pad-card{padding:28px 24px !important}
   .flow-arrow{margin:0 auto}
   .flow-arrow svg{transform:rotate(90deg)}
+}
+/* Touch screens: taller slider hit area so a thumb can grab it. */
+@media (pointer: coarse){
+  #math input[type="range"]{height:44px !important}
 }
 /* Very narrow phones: the header can't fit logo, language switch and button; the hero has the same button. */
 @media (max-width: 350px){
