@@ -26,6 +26,15 @@ The product cover photos in `images/` are from Unsplash (free for commercial use
 - `content-planner.jpg`: Mona Jain, unsplash.com/photos/AJRZMx9XV7M
 - `hard-way-guide.jpg`: Rirri, unsplash.com/photos/p_swqcXUc1k
 
+The six "Your content" tiles in the "Our answer" section, also from Unsplash:
+
+- `post-chillies.jpg`: Josué AS, unsplash.com/photos/fe8oJ_mLC-c
+- `post-shallots.jpg`: unsplash.com/photos/YmgpoBhJAkI
+- `post-fried-rice.jpg`: unsplash.com/photos/rWNcrwqF0nI
+- `post-wok-flame.jpg`: unsplash.com/photos/vUlsoVpTbZs
+- `post-fried-egg.jpg`: unsplash.com/photos/n1jhtaEHIhg
+- `post-rice-bowl.jpg`: unsplash.com/photos/OV6BuDa9uCI
+
 ## Deploy (Vercel)
 
 1. Push this folder to a GitHub repo.
