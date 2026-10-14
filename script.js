@@ -28,14 +28,15 @@ window.__taReady = true;
 
 /* ---------- Earnings estimator ---------- */
 (function () {
-  // Creator's share of each sale, in percent. Change it per deal.
-  var CREATOR_SHARE = 50;
-  var state = { currency: 'IDR', followers: 100000, convX10: 10, priceIDR: 49000, priceUSD: 19 };
+  // The creator's share of each sale (percent) is picked with the "Your share" slider;
+  // its range (50-70%) is set on #ta-share in index.html.
+  var state = { currency: 'IDR', followers: 100000, convX10: 10, priceIDR: 49000, priceUSD: 19, share: 50 };
   var followers = document.getElementById('ta-followers');
   var conv = document.getElementById('ta-conv');
   var price = document.getElementById('ta-price');
+  var share = document.getElementById('ta-share');
   var buttons = document.querySelectorAll('[data-cur]');
-  if (!followers || !conv || !price) return;
+  if (!followers || !conv || !price || !share) return;
   function out(key) { return document.querySelector('[data-out="' + key + '"]'); }
   function money(n) {
     return state.currency === 'IDR' ? 'Rp' + n.toLocaleString('id-ID') : '$' + n.toLocaleString('en-US');
@@ -49,14 +50,15 @@ window.__taReady = true;
     price.value = p;
     var buyers = Math.round(state.followers * state.convX10 / 1000);
     var sales = buyers * p;
-    var yours = Math.round(sales * CREATOR_SHARE / 100);
+    var yours = Math.round(sales * state.share / 100);
     out('followers').textContent = state.followers >= 1000000 ? '1M' : Math.round(state.followers / 1000) + 'K';
     out('conv').textContent = (state.convX10 / 10).toFixed(1) + '%';
     out('price').textContent = money(p);
     out('buyers').textContent = buyers.toLocaleString('en-US');
     out('sales').textContent = money(sales);
     out('yours').textContent = money(yours);
-    out('share').textContent = CREATOR_SHARE + '%';
+    out('share').textContent = state.share + '%';
+    out('sharePick').textContent = state.share + '%';
     buttons.forEach(function (b) {
       var on = b.getAttribute('data-cur') === state.currency;
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
@@ -66,6 +68,7 @@ window.__taReady = true;
   }
   followers.addEventListener('input', function () { state.followers = Number(followers.value); render(); });
   conv.addEventListener('input', function () { state.convX10 = Number(conv.value); render(); });
+  share.addEventListener('input', function () { state.share = Number(share.value); render(); });
   price.addEventListener('input', function () {
     var v = Number(price.value);
     if (state.currency === 'IDR') { state.priceIDR = v; } else { state.priceUSD = v; }

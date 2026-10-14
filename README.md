@@ -14,8 +14,8 @@ ruby -run -e httpd . -p 4321
 ## Notes
 
 - Scroll animations: add `data-reveal` to an element to fade it in, or `data-stagger` to a row so its children appear 80ms apart. Disabled under `prefers-reduced-motion`; content stays visible if JavaScript fails.
-- Earnings estimator: creator share is `CREATOR_SHARE` at the top of the estimator in `script.js`.
-- Placeholders still to fill: `[X]` weeks, `[Your ownership terms]`, `[WHATSAPP NUMBER]`, `[EMAIL]`, `[INSTAGRAM]`, `[creator].store`.
+- Earnings estimator: visitors pick the creator share with the "Your share" slider. Its range (50–70%, steps of 5) is set on `#ta-share` in `index.html`.
+- All placeholders are filled in. `thinkact.store` on the hero phone is an example address, not a real store.
 
 ## Photos
 
