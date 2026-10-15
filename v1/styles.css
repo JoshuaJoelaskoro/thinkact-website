@@ -1,0 +1,121 @@
+body{margin:0;background:#0A0A0A}
+html{scroll-behavior:smooth}
+a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
+@media (max-width: 900px){.nav-links{display:none !important}}
+
+/* ---------- Scroll animations ----------
+   Content is only hidden while <html> has the "js" class, which the inline
+   script in <head> adds and removes again if script.js never starts. */
+.js [data-reveal],
+.js [data-stagger] > *{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .6s cubic-bezier(.22,.61,.36,1), transform .6s cubic-bezier(.22,.61,.36,1);
+}
+.js [data-reveal].is-visible,
+.js [data-stagger].is-visible > *{
+  opacity:1;
+  transform:none;
+}
+.js .hero-fade{animation:hero-fade .9s ease-out both}
+@keyframes hero-fade{from{opacity:0}to{opacity:1}}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js [data-reveal],
+  .js [data-stagger] > *{opacity:1;transform:none;transition:none}
+  .js .hero-fade{animation:none}
+}
+
+/* ---------- Product covers with photos ---------- */
+.cover{aspect-ratio:4/5;box-sizing:border-box;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.cover-photo,.hero-cover-photo,.phone-cover{position:relative;flex-shrink:0;overflow:hidden;background:#1F1F1F}
+.cover-photo{height:70%}
+.cover-photo img,.hero-cover-photo img,.phone-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.cover-tag{position:absolute;top:16px;left:16px;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.14em;line-height:1;color:#F5F5F5;background:rgba(10,10,10,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-radius:999px;padding:6px 10px}
+.cover-body{flex:1;padding:20px 24px 24px}
+.cover-title{font-family:'Newsreader',Georgia,serif;font-size:28px;font-weight:400;letter-spacing:-.02em;line-height:1.04;text-wrap:balance}
+
+.hero-cover-photo{height:52%}
+.hero-cover-title{text-wrap:balance}
+.hero-cover-photo .cover-tag{top:10px;left:10px;font-size:9px;padding:5px 8px}
+
+.phone-cover{margin:0 14px;height:210px;border-radius:18px}
+.phone-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0) 40%,rgba(10,10,10,.85) 100%)}
+.phone-cover .cover-tag{top:14px;left:14px;z-index:1}
+.phone-cover-title{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;font-family:'Newsreader',Georgia,serif;font-size:30px;font-weight:400;letter-spacing:-.02em;line-height:1.02;color:#F5F5F5;text-wrap:balance}
+
+/* ---------- "Your content" post tiles ---------- */
+.post{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:#1F1F1F}
+.post img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.post::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.45) 0%,rgba(10,10,10,0) 40%)}
+.post-play{position:absolute;top:12px;left:12px;z-index:1;width:18px;height:18px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+
+/* ---------- Language switch (header) ---------- */
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.lang-switch{display:inline-flex;border:1px solid #333333;border-radius:999px;padding:3px;gap:2px}
+.lang-switch button{border:0;cursor:pointer;background:transparent;color:#A3A3A3;font-family:'Instrument Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;height:36px;min-width:40px;padding:0 10px;border-radius:999px}
+.lang-switch button:hover{color:#F5F5F5}
+.lang-switch button[aria-pressed="true"]{background:#F5F5F5;color:#0A0A0A}
+.lang-switch button:focus-visible{outline:2px solid #9B7BFF;outline-offset:2px}
+
+/* Outlined and solid buttons share one height (the border counts inside it). */
+.hero-actions a,.contact-actions a{box-sizing:border-box}
+
+/* ---------- Phone menu (section links + main button) ---------- */
+.menu-toggle{display:none}
+.mobile-menu{display:none}
+@media (max-width: 900px){
+  .menu-toggle{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:40px;height:40px;padding:0;border:1px solid #333333;border-radius:999px;background:transparent;cursor:pointer;flex-shrink:0}
+  .menu-toggle span{display:block;width:16px;height:1.5px;background:#F5F5F5;transition:transform .2s ease}
+  .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.75px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.75px) rotate(-45deg)}
+  .menu-toggle:focus-visible{outline:2px solid #9B7BFF;outline-offset:2px}
+  .mobile-menu:not([hidden]){display:flex;flex-direction:column;padding:4px 24px 20px;border-top:1px solid #1F1F1F;max-height:calc(100vh - 60px);overflow-y:auto}
+  .mobile-menu a{display:flex;align-items:center;min-height:52px;border-bottom:1px solid #1F1F1F;font-family:'Instrument Sans',sans-serif;font-size:18px;color:#F5F5F5}
+  .mobile-menu a.mobile-menu-cta{margin-top:16px;border:0;border-radius:999px;justify-content:center;background:#F5F5F5;color:#0A0A0A;font-weight:600;font-size:16px}
+}
+
+/* ---------- Compact header on phones: logo, language switch, menu ---------- */
+@media (max-width: 600px){
+  .nav-studio{display:none !important}
+  .nav-cta{display:none !important}  /* the same button is in the menu */
+  .site-nav{padding:0 16px !important;gap:10px !important;height:60px !important}
+  .nav-logo{gap:7px !important}
+  .nav-logo span:first-child{font-size:19px !important}
+  .nav-right{gap:8px}
+  .lang-switch{padding:2px}
+  .lang-switch button{height:40px;min-width:40px;padding:0 8px;font-size:12px}
+  .mobile-menu:not([hidden]){padding:4px 16px 20px}
+}
+
+/* ---------- Small screens (inline styles need !important) ---------- */
+@media (max-width: 480px){
+  /* Main buttons span the screen, like the reference site, so they are easy to hit. */
+  .hero-actions a,.contact-actions a,.math-cta a{flex:1 1 100%;justify-content:center}
+  .contact-actions{align-self:stretch}
+  /* Contact details: one per line, each with a finger-sized tap area. */
+  .contact-links{display:flex;flex-direction:column;align-items:center}
+  .contact-links .sep{display:none}
+  .contact-links a{display:inline-block;padding:12px 8px}
+  .hero{padding:48px 20px 64px !important}
+  .hero-visual{height:560px !important;max-width:340px !important}
+  .hero-phone{width:250px !important;height:520px !important}
+  .hero-cover{width:150px !important;top:40px !important;right:-8px !important}
+  .hero-cover-title{font-size:18px !important}
+  .hero-report{width:240px !important;right:-8px !important;bottom:0 !important;padding:16px !important}
+  /* Less empty space between sections keeps the page shorter on phones. */
+  .wrap{padding-left:20px !important;padding-right:20px !important;padding-top:72px !important;padding-bottom:72px !important}
+  .wrap > [data-stagger]{margin-top:40px !important}
+  .why-art{height:180px !important;padding:20px !important}
+  .how-art{height:200px !important}
+  .how-art > *{transform:scale(.82)}
+  .answer-product{max-width:280px !important;margin:0 auto !important}
+  .pad-card{padding:28px 24px !important}
+  .flow-arrow{margin:0 auto}
+  .flow-arrow svg{transform:rotate(90deg)}
+}
+/* Touch screens: taller slider hit area so a thumb can grab it. */
+@media (pointer: coarse){
+  #math input[type="range"]{height:44px !important}
+}

@@ -2,524 +2,490 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ThinkAct Studio | Digital products for creators</title>
-<meta name="description" content="ThinkAct Studio builds digital products around your content. You review, share, and earn from every sale.">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&amp;family=Inter:opsz,wght@14..32,300..800&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ThinkAct Studio | Your content, turned into a product</title>
+<meta name="description" content="ThinkAct Studio turns your content into digital products your audience can buy. We write, design and sell it. You keep 50–70% of every sale.">
+<meta name="theme-color" content="#09090B">
+<meta property="og:title" content="ThinkAct Studio | Your content, turned into a product">
+<meta property="og:description" content="We write, design and sell a product made from your content. You review, share, and keep 50–70% of every sale.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thinkact-website.vercel.app/">
+<meta property="og:image" content="https://thinkact-website.vercel.app/img/weeknight-kitchen.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2309090B'/%3E%3Crect x='12' y='12' width='8' height='8' rx='2' fill='%238F72FF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
-// Hide content for scroll animations only while JS runs; if script.js never starts, show everything.
+// Content is only hidden for animations while JS runs; if script.js never starts, show everything.
 document.documentElement.classList.add('js');
-setTimeout(function () { if (!window.__taReady) document.documentElement.classList.remove('js'); }, 2500);
+setTimeout(function () { if (!window.__ta2) document.documentElement.classList.remove('js'); }, 2500);
 </script>
 <script src="copy-id.js" defer></script>
 <script src="script.js" defer></script>
 </head>
 <body>
-<div style="background: #0A0A0A; color: #F5F5F5; font-family: 'Inter', system-ui, sans-serif; font-optical-sizing: auto; overflow-x: clip">
 
-<header style="position: sticky; top: 0; z-index: 10; background: rgba(10,10,10,0.92); border-bottom: 1px solid #1F1F1F">
-<nav class="site-nav" aria-label="Main" data-i18n-aria="aria.nav" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
-<a href="#top" class="nav-logo" style="display: flex; align-items: center; gap: 10px; color: #F5F5F5">
-<span style="font-size: 22px; font-weight: 800; letter-spacing: -0.03em">ThinkAct</span>
-<span style="width: 7px; height: 7px; background: #9B7BFF; display: inline-block"></span>
-<span class="nav-studio" style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3">STUDIO</span>
-</a>
-<div class="nav-links" style="display: flex; gap: 32px; font-family: 'Instrument Sans', sans-serif; font-size: 15px">
-<a href="#how" style="color: #A3A3A3"><span data-i18n="nav.how">How it works</span></a>
-<a href="#build" style="color: #A3A3A3"><span data-i18n="nav.build">What we build</span></a>
-<a href="#math" style="color: #A3A3A3"><span data-i18n="nav.math">The math</span></a>
-<a href="#faq" style="color: #A3A3A3">FAQ</a>
-</div>
-<div class="nav-right">
-<div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="aria.language">
-<button type="button" data-lang="en" aria-pressed="true">EN</button>
-<button type="button" data-lang="id" aria-pressed="false">ID</button>
-</div>
-<a href="#contact" class="nav-cta" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 15px; padding: 0 20px; height: 44px; display: inline-flex; align-items: center; border-radius: 999px; flex-shrink: 0"><span data-i18n="cta.partner">Partner with us</span></a>
-<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu" data-i18n-aria="aria.menu"><span></span><span></span></button>
-</div>
-</nav>
-<div id="mobile-menu" class="mobile-menu" hidden>
-<a href="#how"><span data-i18n="nav.how">How it works</span></a>
-<a href="#build"><span data-i18n="nav.build">What we build</span></a>
-<a href="#math"><span data-i18n="nav.math">The math</span></a>
-<a href="#faq">FAQ</a>
-<a href="#contact" class="mobile-menu-cta"><span data-i18n="cta.partner">Partner with us</span></a>
-</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.5 8h13l-1 12h-11z"/><path d="M9 8a3 3 0 0 1 6 0"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-12.3 7.6L3.5 20.5l.9-4.5A8.5 8.5 0 1 1 20.5 12z"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3.5 7.5h15a2.5 2.5 0 0 1 2.5 2.5v7.5a2.5 2.5 0 0 1-2.5 2.5h-12a3 3 0 0 1-3-3z"/><path d="M3.5 7.5l11-4v4"/><path d="M16.5 14h.01"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15.5" r="4"/><path d="M11 12.5l9-9M16.5 6l3 3M14 8.5l2 2"/></symbol>
+  <symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><path d="M4 20h16M7 16v-5M12 16V6M17 16v-8"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9.5L5.5 4h13L20 9.5M4.5 9.5h15V20h-15zM9.5 20v-5.5h5V20"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7h.01"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/></symbol>
+</svg>
+
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="header">
+  <nav class="nav" aria-label="Main" data-i18n-aria="aria.nav">
+    <a href="#top" class="logo" aria-label="ThinkAct Studio"><span class="logo-word">ThinkAct</span><span class="logo-dot"></span><span class="logo-studio">Studio</span></a>
+    <div class="nav-links">
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#products" data-i18n="nav.products">Products</a>
+      <a href="#earnings" data-i18n="nav.earnings">Earnings</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language" data-i18n-aria="aria.lang">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+      </div>
+      <a class="btn btn-sm btn-light nav-cta" href="https://wa.me/6281211804181" target="_blank" rel="noopener" data-i18n="cta.talk">Let's talk</a>
+      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-i18n-aria="aria.menu"><span></span><span></span></button>
+    </div>
+  </nav>
+  <div id="menu" class="menu" hidden>
+    <a href="#how" data-i18n="nav.how">How it works</a>
+    <a href="#products" data-i18n="nav.products">Products</a>
+    <a href="#earnings" data-i18n="nav.earnings">Earnings</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-lg btn-light" href="https://wa.me/6281211804181" target="_blank" rel="noopener"><span data-i18n="cta.wa">Chat on WhatsApp</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
 </header>
 
-<section id="top" class="hero hero-fade" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 112px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px 48px">
-<div style="flex: 1 1 520px; min-width: 0">
-<div style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
-<span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span><span data-i18n="hero.eyebrow">DIGITAL PRODUCT STUDIO FOR CREATORS</span></span>
-</div>
-<h1 style="margin: 28px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(46px, 6vw, 88px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 300"><span data-i18n="hero.h1a">You make the content.</span> <span style="color: #9B7BFF"><span data-i18n="hero.h1b">We turn it into a product.</span></span></h1>
-<p style="margin: 32px 0 0; font-size: 20px; line-height: 1.55; color: #A3A3A3; max-width: 520px"><span data-i18n="hero.lead">We build digital products around your content. You review, share, and earn from every sale.</span></p>
-<div class="hero-actions" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#contact" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px"><span data-i18n="cta.partner">Partner with us</span>
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-</a>
-<a href="#how" style="border: 1px solid #333333; color: #F5F5F5; font-family: 'Instrument Sans', sans-serif; font-weight: 500; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; border-radius: 999px"><span data-i18n="nav.how">How it works</span></a>
-</div>
-<div style="margin-top: 56px; padding-top: 24px; border-top: 1px solid #1F1F1F; display: flex; flex-wrap: wrap; gap: 12px 32px; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.12em; color: #8A8A8A">
-<span><span data-i18n="hero.trust1">REVENUE SHARE</span></span>
-<span><span data-i18n="hero.trust2">NO UPFRONT FEE</span></span>
-<span><span data-i18n="hero.trust3">INDONESIA + INTERNATIONAL</span></span>
-</div>
-</div>
+<main id="main">
 
-<div style="flex: 1 1 440px; min-width: 0; display: flex; justify-content: center">
-<div aria-hidden="true" class="hero-visual" style="position: relative; width: 100%; max-width: 520px; height: 600px">
-<div class="hero-cover" style="position: absolute; top: 28px; right: 0; width: 190px; aspect-ratio: 3 / 4; box-sizing: border-box; background: #F5F5F5; color: #0A0A0A; border-radius: 12px; overflow: hidden; transform: rotate(6deg); display: flex; flex-direction: column; box-shadow: 0 30px 60px rgba(0,0,0,0.55)">
-<div class="hero-cover-photo"><img src="images/hard-way-guide.jpg" alt=""><span class="cover-tag"><span data-i18n="mock.pdf">PDF GUIDE</span></span></div>
-<div style="flex: 1; padding: 12px 16px 14px; display: flex; flex-direction: column; justify-content: space-between">
-<div class="hero-cover-title" style="font-family: 'Newsreader', Georgia, serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; line-height: 1.02"><span data-i18n="product.hardway">I Learned It the Hard Way</span></div>
-<div style="font-size: 11px; color: #525252"><span data-i18n="mock.with">with ThinkAct Studio</span></div>
-</div>
-</div>
-<div class="hero-phone" style="position: absolute; top: 0; left: 0; width: 280px; height: 580px; box-sizing: border-box; background: #050505; border: 1px solid #333333; border-radius: 44px; padding: 10px; box-shadow: 0 40px 80px rgba(0,0,0,0.6)">
-<div style="width: 100%; height: 100%; box-sizing: border-box; background: #F5F5F5; border-radius: 34px; overflow: hidden; color: #0A0A0A; display: flex; flex-direction: column">
-<div style="padding: 18px 16px 12px; display: flex; justify-content: center">
-<span style="font-family: 'Inter', sans-serif; font-size: 11px; color: #525252; background: #E5E5E5; border-radius: 999px; padding: 6px 14px">thinkact.store</span>
-</div>
-<div class="phone-cover">
-<img src="images/weeknight-kitchen.jpg" alt="">
-<span class="cover-tag"><span data-i18n="mock.recipe">RECIPE GUIDE</span></span>
-<div class="phone-cover-title"><span data-i18n="product.kitchen">Weeknight Kitchen</span></div>
-</div>
-<div style="padding: 18px 18px 0">
-<div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em"><span data-i18n="product.kitchen">Weeknight Kitchen</span></div>
-<div style="margin-top: 4px; font-size: 13px; color: #525252"><span data-i18n="mock.by">by ThinkAct Studio</span></div>
-<div style="margin-top: 16px; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: #262626">
-<div style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; background: #6D4AFF; display: inline-block"></span><span data-i18n="mock.item1">Quick breakfasts</span></div>
-<div style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; background: #6D4AFF; display: inline-block"></span><span data-i18n="mock.item2">15-minute dinners</span></div>
-<div style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; background: #6D4AFF; display: inline-block"></span><span data-i18n="mock.item3">Weekly meal prep</span></div>
-</div>
-</div>
-<div style="margin-top: auto; padding: 16px 18px 22px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #E5E5E5">
-<span style="font-size: 18px; font-weight: 700">Rp49.000</span>
-<span style="background: #0A0A0A; color: #F5F5F5; font-size: 14px; font-weight: 600; height: 40px; padding: 0 18px; display: inline-flex; align-items: center; border-radius: 999px"><span data-i18n="mock.buy">Buy now</span></span>
-</div>
-</div>
-</div>
-<div class="hero-report" style="position: absolute; right: 0; bottom: 8px; width: 260px; box-sizing: border-box; background: #141414; border: 1px solid #2C2C2C; border-radius: 16px; padding: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.55)">
-<div style="display: flex; justify-content: space-between; align-items: center">
-<span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="mock.report">MONTHLY REPORT</span></span>
-<span style="font-family: 'Inter', sans-serif; font-size: 9px; letter-spacing: 0.12em; color: #A3A3A3; border: 1px solid #333333; border-radius: 999px; padding: 3px 8px"><span data-i18n="mock.example">EXAMPLE</span></span>
-</div>
-<div style="margin-top: 18px; height: 88px; display: flex; align-items: flex-end; gap: 8px">
-<div style="flex: 1; height: 30%; background: #2C2350; border-radius: 4px"></div>
-<div style="flex: 1; height: 46%; background: #2C2350; border-radius: 4px"></div>
-<div style="flex: 1; height: 40%; background: #2C2350; border-radius: 4px"></div>
-<div style="flex: 1; height: 62%; background: #2C2350; border-radius: 4px"></div>
-<div style="flex: 1; height: 76%; background: #2C2350; border-radius: 4px"></div>
-<div style="flex: 1; height: 100%; background: #9B7BFF; border-radius: 4px"></div>
-</div>
-<div style="margin-top: 8px; display: flex; justify-content: space-between; font-family: 'Inter', sans-serif; font-size: 9px; color: #8A8A8A">
-<span><span data-i18n="month.may">MAY</span></span><span>JUN</span><span>JUL</span><span><span data-i18n="month.aug">AUG</span></span><span>SEP</span><span><span data-i18n="month.oct">OCT</span></span>
-</div>
-<div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #262626; display: flex; justify-content: space-between; align-items: baseline">
-<span style="font-size: 12px; color: #A3A3A3"><span data-i18n="share.label">Your share</span></span>
-<span style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em">Rp3.136.000</span>
-</div>
-</div>
-</div>
-</div>
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="pill reveal"><span class="pulse"></span><span data-i18n="hero.eyebrow">Digital product studio for creators</span></p>
+      <h1 class="display reveal" style="--delay:80ms"><span data-i18n="hero.t1">You built the audience.</span> <em data-i18n="hero.t2">We build the product.</em></h1>
+      <p class="lead reveal" style="--delay:160ms" data-i18n="hero.lead">We turn what you already share into guides, playbooks and templates your audience can buy. We write, design and sell it. You review, share, and keep 50&#8288;–&#8288;70% of every sale.</p>
+      <div class="actions reveal" style="--delay:240ms">
+        <a class="btn btn-lg btn-light" href="https://wa.me/6281211804181" target="_blank" rel="noopener"><span data-i18n="cta.wa">Chat on WhatsApp</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-lg btn-ghost" href="#how" data-i18n="hero.secondary">See how it works</a>
+      </div>
+      <ul class="chips reveal" style="--delay:320ms">
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="chip.fee">No upfront fee</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="chip.own">You own the product</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="chip.share">50–70% to you</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-visual reveal" style="--delay:200ms" aria-hidden="true">
+      <div class="stage" data-anim>
+        <div class="feed">
+          <div class="feed-col">
+            <div class="tile"><img src="img/thumb-chillies.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+            <div class="tile"><img src="img/thumb-wok-flame.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+            <div class="tile"><img src="img/thumb-hard-way-guide.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+            <div class="tile"><img src="img/thumb-fried-rice.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+          </div>
+          <div class="feed-col">
+            <div class="tile"><img src="img/thumb-shallots.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+            <div class="tile"><img src="img/thumb-content-planner.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+            <div class="tile"><img src="img/thumb-fried-egg.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+            <div class="tile"><img src="img/thumb-starter-playbook.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+          </div>
+          <div class="feed-col">
+            <div class="tile"><img src="img/thumb-rice-bowl.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+            <div class="tile"><img src="img/thumb-weeknight-kitchen.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+            <div class="tile"><img src="img/thumb-wok-flame.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+            <div class="tile"><img src="img/thumb-chillies.jpg" alt=""><svg class="tile-play"><use href="#i-play"/></svg></div>
+          </div>
+        </div>
+        <div class="stage-shade"></div>
+
+        <div class="stage-meta">
+          <span class="tag" data-i18n="example">Example</span>
+          <span class="month"><span data-i18n="toast.month">Your share this month</span><b class="month-amt">Rp3.136.000</b></span>
+        </div>
+
+        <div class="book-wrap">
+          <div class="book-tilt">
+            <div class="book">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <div class="book-photo"><img src="img/cover-kitchen-480.jpg" alt=""></div>
+                <div class="book-body">
+                  <span class="book-tag" data-i18n="product.recipeTag">Recipe guide</span>
+                  <span class="book-title" data-i18n="product.kitchen">Weeknight Kitchen</span>
+                  <span class="book-by" data-i18n="product.by">by ThinkAct Studio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="book-shadow"></div>
+        </div>
+
+        <div class="toast">
+          <span class="toast-icon"><svg class="ic"><use href="#i-bag"/></svg></span>
+          <span class="toast-text"><b data-i18n="toast.order">New order</b><span class="toast-item">Weeknight Kitchen</span></span>
+          <span class="toast-amt">+Rp49.000</span>
+        </div>
+      </div>
+      <p class="stage-caption"><span data-i18n="stage.from">Your content</span><svg class="ic"><use href="#i-arrow"/></svg><span data-i18n="stage.to">a product people buy</span></p>
+    </div>
+  </div>
 </section>
 
-<section style="border-top: 1px solid #1F1F1F">
-<div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
-<div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
-<span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span><span data-i18n="why.eyebrow">WHY WE BUILT THINKACT</span></span>
-</div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(36px, 4.8vw, 66px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 300; max-width: 940px"><span data-i18n="why.h2a">Creators give a lot.</span> <span style="color: #8A8A8A"><span data-i18n="why.h2b">Most get little back.</span></span></h2>
-<p data-reveal style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 560px"><span data-i18n="why.lead">The way most creators earn today isn't built to last.</span></p>
-
-<div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 20px">
-
-<div style="flex: 1 1 300px; min-width: 0; box-sizing: border-box; background: #141414; border: 1px solid #262626; border-radius: 16px; overflow: hidden">
-<div aria-hidden="true" class="why-art" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; position: relative">
-<span style="position: absolute; top: 24px; right: 24px; font-size: 11px; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #333333; border-radius: 999px; padding: 5px 10px"><span data-i18n="why.c1tag">CAMPAIGN ENDED</span></span>
-<div style="height: 110px; display: flex; align-items: flex-end; gap: 6px">
-<div style="flex: 1; height: 62%; background: #3A3A3A; border-radius: 3px"></div>
-<div style="flex: 1; height: 12%; background: #3A3A3A; border-radius: 3px"></div>
-<div style="flex: 1; height: 4%; background: #3A3A3A; border-radius: 3px"></div>
-<div style="flex: 1; height: 88%; background: #3A3A3A; border-radius: 3px"></div>
-<div style="flex: 1; height: 8%; background: #3A3A3A; border-radius: 3px"></div>
-<div style="flex: 1; height: 36%; background: #3A3A3A; border-radius: 3px"></div>
-<div style="flex: 1; height: 4%; background: #3A3A3A; border-radius: 3px"></div>
-<div style="flex: 1; height: 54%; background: #3A3A3A; border-radius: 3px"></div>
-<div style="flex: 1; height: 6%; background: #3A3A3A; border-radius: 3px"></div>
-<div style="flex: 1; height: 18%; background: #3A3A3A; border-radius: 3px"></div>
-</div>
-<div style="margin-top: 12px; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A"><span data-i18n="why.c1chart">INCOME FROM BRAND DEALS</span></div>
-</div>
-<div style="padding: 28px">
-<div style="font-size: 13px; letter-spacing: 0.14em; color: #9B7BFF">01</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1"><span data-i18n="why.c1title">Brand deals come and go</span></h3>
-<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #A3A3A3"><span data-i18n="why.c1body">Most income depends on endorsements. When the campaigns stop, so does the money.</span></p>
-</div>
+<!-- Product types strip -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span data-i18n="kind.recipe">Recipe guides</span><i>✦</i>
+    <span data-i18n="kind.playbook">Playbooks</span><i>✦</i>
+    <span data-i18n="kind.template">Templates</span><i>✦</i>
+    <span data-i18n="kind.checklist">Checklists</span><i>✦</i>
+    <span data-i18n="kind.planner">Planners</span><i>✦</i>
+    <span data-i18n="kind.personal">Personality-led guides</span><i>✦</i>
+  </div>
 </div>
 
-<div style="flex: 1 1 300px; min-width: 0; box-sizing: border-box; background: #141414; border: 1px solid #262626; border-radius: 16px; overflow: hidden">
-<div aria-hidden="true" class="why-art" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; padding: 28px; display: flex; align-items: center; justify-content: center">
-<div style="width: 100%; max-width: 260px; box-sizing: border-box; background: #F5F5F5; color: #0A0A0A; border-radius: 12px; padding: 16px">
-<div style="display: flex; align-items: center; gap: 10px">
-<span style="width: 30px; height: 30px; border-radius: 999px; background: #D4D4D4; flex-shrink: 0"></span>
-<div style="flex: 1">
-<div style="height: 7px; width: 60%; background: #0A0A0A; border-radius: 3px"></div>
-<div style="margin-top: 6px; height: 5px; width: 38%; background: #A3A3A3; border-radius: 3px"></div>
-</div>
-<span style="font-size: 11px; font-weight: 600; color: #525252"><span data-i18n="why.shop">Shop</span></span>
-</div>
-<div style="margin-top: 14px; height: 76px; box-sizing: border-box; border: 1.5px dashed #A3A3A3; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13px; color: #525252">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg><span data-i18n="why.noproducts">No products yet</span>
-</div>
-</div>
-</div>
-<div style="padding: 28px">
-<div style="font-size: 13px; letter-spacing: 0.14em; color: #9B7BFF">02</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1"><span data-i18n="why.c2title">Nothing of your own to sell</span></h3>
-<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #A3A3A3"><span data-i18n="why.c2body">Your audience trusts you and wants more, but there's nothing for them to buy.</span></p>
-</div>
-</div>
+<!-- Problem -->
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-i18n="why.eyebrow">The problem</p>
+      <h2 class="h2 reveal"><span data-i18n="why.t1">Brand deals stop.</span> <em data-i18n="why.t2">Products keep selling.</em></h2>
+      <p class="lead reveal" data-i18n="why.lead">Most creators live campaign to campaign. A product of your own turns the trust you've built into income that doesn't wait for the next brief.</p>
+    </div>
 
-<div style="flex: 1 1 300px; min-width: 0; box-sizing: border-box; background: #141414; border: 1px solid #262626; border-radius: 16px; overflow: hidden">
-<div aria-hidden="true" class="why-art" style="height: 210px; box-sizing: border-box; background: #0F0F0F; border-bottom: 1px solid #262626; display: flex; align-items: center; justify-content: center">
-<div style="position: relative; width: 224px; height: 150px">
-<div style="position: absolute; left: 0; top: 16px; width: 100px; height: 128px; box-sizing: border-box; background: #262626; border-radius: 10px; padding: 10px; transform: rotate(-8deg); display: flex; flex-direction: column; justify-content: space-between">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="#A3A3A3"><path d="M8 5.5v13l11-6.5z"></path></svg>
-<span style="align-self: flex-start; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #444444; border-radius: 999px; padding: 3px 7px"><span data-i18n="why.free">FREE</span></span>
-</div>
-<div style="position: absolute; left: 62px; top: 6px; width: 100px; height: 128px; box-sizing: border-box; background: #1F1F1F; border: 1px solid #333333; border-radius: 10px; padding: 10px; transform: rotate(-2deg); display: flex; flex-direction: column; justify-content: space-between">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="#A3A3A3"><path d="M8 5.5v13l11-6.5z"></path></svg>
-<span style="align-self: flex-start; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; color: #A3A3A3; border: 1px solid #444444; border-radius: 999px; padding: 3px 7px"><span data-i18n="why.free">FREE</span></span>
-</div>
-<div style="position: absolute; left: 124px; top: 0; width: 100px; height: 128px; box-sizing: border-box; background: #F5F5F5; border-radius: 10px; padding: 10px; transform: rotate(6deg); display: flex; flex-direction: column; justify-content: space-between">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="#0A0A0A"><path d="M8 5.5v13l11-6.5z"></path></svg>
-<span style="align-self: flex-start; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; color: #0A0A0A; border: 1px solid #A3A3A3; border-radius: 999px; padding: 3px 7px"><span data-i18n="why.free">FREE</span></span>
-</div>
-</div>
-</div>
-<div style="padding: 28px">
-<div style="font-size: 13px; letter-spacing: 0.14em; color: #9B7BFF">03</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1"><span data-i18n="why.c3title">Endless content, little in return</span></h3>
-<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #A3A3A3"><span data-i18n="why.c3body">You post every day and share your best ideas for free. The value goes to the platform, not to you.</span></p>
-</div>
-</div>
+    <figure class="chart-card reveal">
+      <div class="chart-head">
+        <span class="legend"><i class="lg-a"></i><span data-i18n="chart.deals">Brand deals</span></span>
+        <span class="legend"><i class="lg-b"></i><span data-i18n="chart.product">Your own product</span></span>
+        <span class="tag" data-i18n="chart.note">Illustration, not real data</span>
+      </div>
+      <svg class="chart" viewBox="0 0 640 260" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gradB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8F72FF" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#8F72FF" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g class="grid"><line x1="0" y1="60" x2="640" y2="60"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="180" x2="640" y2="180"/><line x1="0" y1="240" x2="640" y2="240"/></g>
+        <path class="area-b" d="M0,232 C110,226 190,210 270,186 S430,128 520,96 S610,64 640,56 L640,260 L0,260 Z"/>
+        <path class="line-a" pathLength="1" d="M0,236 L46,236 L56,96 L92,96 L102,236 L176,236 L186,64 L222,64 L232,236 L330,236 L340,124 L368,124 L378,236 L466,236 L476,84 L506,84 L516,236 L640,236"/>
+        <path class="line-b" pathLength="1" d="M0,232 C110,226 190,210 270,186 S430,128 520,96 S610,64 640,56"/>
+      </svg>
+      <figcaption class="chart-foot"><span data-i18n="chart.start">Launch</span><span data-i18n="chart.end">12 months later</span></figcaption>
+    </figure>
 
-</div>
-
-<div style="margin-top: 112px; padding-top: 72px; border-top: 1px solid #1F1F1F">
-<div data-reveal style="font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
-<span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span><span data-i18n="answer.eyebrow">OUR ANSWER</span></span>
-</div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(36px, 4.8vw, 66px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 300; max-width: 960px"><span data-i18n="answer.h2a">That's why we help you build</span> <span style="color: #9B7BFF"><span data-i18n="answer.h2b">your own product.</span></span></h2>
-<p data-reveal style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 600px"><span data-i18n="answer.lead">We turn what you already know into something your audience can buy. They get real value, and you get income you own.</span></p>
-</div>
-<div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 32px">
-<figure style="margin: 0; flex: 2 1 380px; min-width: 0">
-<div aria-hidden="true" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
-<div class="post"><img src="images/post-chillies.jpg" alt="" loading="lazy"><svg class="post-play" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5.5v13l11-6.5z"></path></svg></div>
-<div class="post"><img src="images/post-shallots.jpg" alt="" loading="lazy"><svg class="post-play" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5.5v13l11-6.5z"></path></svg></div>
-<div class="post"><img src="images/post-fried-rice.jpg" alt="" loading="lazy"><svg class="post-play" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5.5v13l11-6.5z"></path></svg></div>
-<div class="post"><img src="images/post-wok-flame.jpg" alt="" loading="lazy"><svg class="post-play" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5.5v13l11-6.5z"></path></svg></div>
-<div class="post"><img src="images/post-fried-egg.jpg" alt="" loading="lazy"><svg class="post-play" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5.5v13l11-6.5z"></path></svg></div>
-<div class="post"><img src="images/post-rice-bowl.jpg" alt="" loading="lazy"><svg class="post-play" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5.5v13l11-6.5z"></path></svg></div>
-</div>
-<figcaption style="margin-top: 16px; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #8A8A8A"><span data-i18n="answer.content">YOUR CONTENT</span></figcaption>
-</figure>
-<div aria-hidden="true" class="flow-arrow" style="flex: 0 0 auto; width: 64px; height: 64px; border-radius: 999px; border: 1px solid #333333; display: flex; align-items: center; justify-content: center">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-</div>
-<figure class="answer-product" style="margin: 0; flex: 1 1 260px; min-width: 0; max-width: 360px">
-<div aria-hidden="true" style="aspect-ratio: 4 / 5; box-sizing: border-box; background: #F5F5F5; color: #0A0A0A; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 30px 60px rgba(0,0,0,0.5)">
-<div style="display: flex; justify-content: space-between; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; color: #525252"><span><span data-i18n="answer.guide">DIGITAL GUIDE</span></span><span style="width: 8px; height: 8px; background: #6D4AFF; display: inline-block"></span></div>
-<div style="font-family: 'Newsreader', Georgia, serif; font-size: 42px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.04"><span data-i18n="answer.knowhow">Your know-how, in one guide.</span></div>
-<div style="font-size: 13px; color: #525252"><span data-i18n="mock.by">by ThinkAct Studio</span></div>
-</div>
-<figcaption style="margin-top: 16px; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #8A8A8A"><span data-i18n="answer.product">YOUR PRODUCT</span></figcaption>
-</figure>
-</div>
-</div>
+    <ol class="pains">
+      <li class="reveal"><span class="n">01</span><span data-i18n="why.p1">Income stops when the campaigns do.</span></li>
+      <li class="reveal" style="--delay:80ms"><span class="n">02</span><span data-i18n="why.p2">Your best ideas are given away for free.</span></li>
+      <li class="reveal" style="--delay:160ms"><span class="n">03</span><span data-i18n="why.p3">Your audience wants more, but there's nothing to buy.</span></li>
+    </ol>
+  </div>
 </section>
 
-<section id="how" style="background: #FAFAFA; color: #0A0A0A">
-<div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
-<div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #525252; display: flex; align-items: center; gap: 10px">
-<span style="width: 8px; height: 8px; background: #6D4AFF; display: inline-block; flex-shrink: 0"></span>
-<span><span data-i18n="how.eyebrow">HOW IT WORKS</span></span>
-</div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 300"><span data-i18n="how.h2">Three steps. Most of them are ours.</span></h2>
-<div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 48px 24px">
+<!-- How it works -->
+<section class="section light" id="how">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-i18n="how.eyebrow">How it works</p>
+      <h2 class="h2 reveal"><span data-i18n="how.t1">Three steps.</span> <em data-i18n="how.t2">Most of them are ours.</em></h2>
+    </div>
 
-<div style="flex: 1 1 300px; min-width: 0">
-<div aria-hidden="true" class="how-art" style="height: 240px; box-sizing: border-box; background: #EFEFEF; border: 1px solid #E2E2E2; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden">
-<div style="width: 64%; height: 190px; box-sizing: border-box; background: #FFFFFF; border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 9px; box-shadow: 0 12px 30px rgba(0,0,0,0.08)">
-<div style="height: 10px; width: 62%; background: #0A0A0A; border-radius: 3px"></div>
-<div style="height: 56px; background: #E4DDFF; border-radius: 6px; margin: 4px 0"></div>
-<div style="height: 6px; width: 100%; background: #D4D4D4; border-radius: 3px"></div>
-<div style="height: 6px; width: 88%; background: #D4D4D4; border-radius: 3px"></div>
-<div style="height: 6px; width: 94%; background: #D4D4D4; border-radius: 3px"></div>
-<div style="height: 6px; width: 60%; background: #D4D4D4; border-radius: 3px"></div>
-</div>
-</div>
-<div style="margin-top: 28px; font-family: 'Inter', sans-serif; font-size: 14px; color: #6D4AFF; font-weight: 500">01</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 400; letter-spacing: -0.015em"><span data-i18n="how.s1title">We build it</span></h3>
-<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #404040"><span data-i18n="how.s1body">We write and design a product that sounds like you.</span></p>
-</div>
+    <ol class="steps">
+      <li class="step reveal">
+        <div class="step-art" data-anim aria-hidden="true">
+          <div class="doc">
+            <div class="doc-top"><span class="doc-dot"></span><span data-i18n="art.draft">Draft v1</span></div>
+            <div class="doc-cover"><img src="img/thumb-fried-rice.jpg" alt=""></div>
+            <span class="doc-line" style="--w:92%;--d:0s"></span>
+            <span class="doc-line" style="--w:78%;--d:.35s"></span>
+            <span class="doc-line" style="--w:86%;--d:.7s"></span>
+            <span class="doc-line" style="--w:54%;--d:1.05s"></span>
+          </div>
+        </div>
+        <span class="step-num">01</span>
+        <h3 data-i18n="how.s1t">We build it</h3>
+        <p data-i18n="how.s1p">We research, write and design a product in your voice, from the content you've already made.</p>
+      </li>
+      <li class="step reveal" style="--delay:100ms">
+        <div class="step-art" data-anim aria-hidden="true">
+          <div class="story">
+            <div class="story-bars"><i></i><i></i><i></i></div>
+            <div class="story-card"><img src="img/thumb-weeknight-kitchen.jpg" alt=""></div>
+            <div class="story-btn">
+              <span class="sb-approve" data-i18n="art.approve">Approve</span>
+              <span class="sb-approved"><svg class="ic"><use href="#i-check"/></svg><span data-i18n="art.approved">Approved</span></span>
+            </div>
+            <span class="tap"></span>
+          </div>
+          <span class="story-link" data-i18n="art.link">Link in bio</span>
+        </div>
+        <span class="step-num">02</span>
+        <h3 data-i18n="how.s2t">You review and share</h3>
+        <p data-i18n="how.s2p">Approve the draft, then tell your audience. A post, a story, a link in bio.</p>
+      </li>
+      <li class="step reveal" style="--delay:200ms">
+        <div class="step-art" data-anim aria-hidden="true">
+          <div class="report">
+            <div class="report-head"><span data-i18n="art.report">Monthly report</span><span class="tag tag-light" data-i18n="example">Example</span></div>
+            <div class="bars">
+              <i style="--h:30%;--d:0s"></i><i style="--h:44%;--d:.12s"></i><i style="--h:40%;--d:.24s"></i><i style="--h:60%;--d:.36s"></i><i style="--h:76%;--d:.48s"></i><i style="--h:100%;--d:.6s"></i>
+            </div>
+            <div class="report-foot"><span data-i18n="art.share">Your share</span><b>Rp3.136.000</b></div>
+          </div>
+        </div>
+        <span class="step-num">03</span>
+        <h3 data-i18n="how.s3t">We sell and report</h3>
+        <p data-i18n="how.s3p">We run the store on Lynk.id, Shopee and TikTok Shop and send you a sales report every month.</p>
+      </li>
+    </ol>
 
-<div style="flex: 1 1 300px; min-width: 0">
-<div aria-hidden="true" class="how-art" style="height: 240px; box-sizing: border-box; background: #EFEFEF; border: 1px solid #E2E2E2; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative">
-<div style="width: 124px; height: 196px; box-sizing: border-box; background: #0A0A0A; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 30px rgba(0,0,0,0.18)">
-<div style="display: flex; gap: 4px"><div style="flex: 1; height: 3px; background: #F5F5F5; border-radius: 2px"></div><div style="flex: 1; height: 3px; background: #525252; border-radius: 2px"></div></div>
-<div style="align-self: center; width: 70px; height: 88px; box-sizing: border-box; background: #F5F5F5; border-radius: 6px; padding: 8px; display: flex; flex-direction: column; justify-content: flex-end">
-<div style="height: 5px; width: 90%; background: #0A0A0A; border-radius: 2px"></div>
-<div style="margin-top: 4px; height: 5px; width: 60%; background: #6D4AFF; border-radius: 2px"></div>
-</div>
-<div style="align-self: center; font-size: 10px; font-weight: 600; color: #0A0A0A; background: #F5F5F5; border-radius: 999px; padding: 5px 10px"><span data-i18n="how.linkbio">Link in bio</span></div>
-</div>
-<div style="position: absolute; top: 24px; left: 24px; display: inline-flex; align-items: center; gap: 6px; background: #FFFFFF; border: 1px solid #E2E2E2; border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 600">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6D4AFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.approved">Approved</span>
-</div>
-</div>
-<div style="margin-top: 28px; font-family: 'Inter', sans-serif; font-size: 14px; color: #6D4AFF; font-weight: 500">02</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 400; letter-spacing: -0.015em"><span data-i18n="how.s2title">You review and share</span></h3>
-<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #404040"><span data-i18n="how.s2body">Approve the draft, then tell your audience about it.</span></p>
-</div>
-
-<div style="flex: 1 1 300px; min-width: 0">
-<div aria-hidden="true" class="how-art" style="height: 240px; box-sizing: border-box; background: #EFEFEF; border: 1px solid #E2E2E2; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden">
-<div style="width: 70%; box-sizing: border-box; background: #FFFFFF; border-radius: 10px; padding: 18px; box-shadow: 0 12px 30px rgba(0,0,0,0.08)">
-<div style="display: flex; justify-content: space-between; align-items: center"><div style="height: 8px; width: 50%; background: #0A0A0A; border-radius: 3px"></div><div style="height: 8px; width: 18%; background: #D4D4D4; border-radius: 3px"></div></div>
-<div style="margin-top: 18px; height: 100px; display: flex; align-items: flex-end; gap: 8px">
-<div style="flex: 1; height: 34%; background: #D4D4D4; border-radius: 3px"></div>
-<div style="flex: 1; height: 50%; background: #D4D4D4; border-radius: 3px"></div>
-<div style="flex: 1; height: 44%; background: #D4D4D4; border-radius: 3px"></div>
-<div style="flex: 1; height: 66%; background: #D4D4D4; border-radius: 3px"></div>
-<div style="flex: 1; height: 80%; background: #0A0A0A; border-radius: 3px"></div>
-<div style="flex: 1; height: 100%; background: #6D4AFF; border-radius: 3px"></div>
-</div>
-</div>
-</div>
-<div style="margin-top: 28px; font-family: 'Inter', sans-serif; font-size: 14px; color: #6D4AFF; font-weight: 500">03</div>
-<h3 style="margin: 12px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 400; letter-spacing: -0.015em"><span data-i18n="how.s3title">We sell and report</span></h3>
-<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #404040"><span data-i18n="how.s3body">We run the store and send you a sales report every month.</span></p>
-</div>
-
-</div>
-<div data-stagger style="margin-top: 80px; display: flex; flex-wrap: wrap; gap: 20px">
-<div class="pad-card" style="flex: 2 1 420px; box-sizing: border-box; background: #0A0A0A; color: #F5F5F5; border-radius: 16px; padding: 40px">
-<div style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="how.ours">THINKACT HANDLES</span></div>
-<ul style="list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 18px; font-size: 21px; font-weight: 500">
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.ours1">Research and writing</span></li>
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.ours2">Design and layout</span></li>
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.ours3">Store page and checkout</span></li>
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9B7BFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.ours4">Monthly sales reports</span></li>
-</ul>
-</div>
-<div class="pad-card" style="flex: 1 1 300px; box-sizing: border-box; border: 1px solid #D4D4D4; border-radius: 16px; padding: 40px">
-<div style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #525252"><span data-i18n="how.yours">YOU HANDLE</span></div>
-<ul style="list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 18px; font-size: 21px; font-weight: 500">
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.yours1">Reviewing the content</span></li>
-<li style="display: flex; align-items: center; gap: 14px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span data-i18n="how.yours2">Sharing it with your audience</span></li>
-</ul>
-</div>
-</div>
-</div>
+    <div class="split reveal">
+      <div class="split-card split-dark">
+        <h3 data-i18n="split.ours">ThinkAct handles</h3>
+        <ul>
+          <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="split.o1">Research and writing</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="split.o2">Design and layout</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="split.o3">Store page and checkout</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="split.o4">Monthly sales reports</span></li>
+        </ul>
+      </div>
+      <div class="split-card split-line">
+        <h3 data-i18n="split.yours">You handle</h3>
+        <ul>
+          <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="split.y1">Reviewing the draft</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="split.y2">Sharing it with your audience</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="build" class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
-<div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
-<span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span><span data-i18n="build.eyebrow">WHAT WE BUILD</span></span>
-</div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 300; max-width: 900px"><span data-i18n="build.h2">Products that fit your persona, not a template.</span></h2>
-<div data-stagger style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 40px 20px">
-
-<div style="flex: 1 1 250px; min-width: 0">
-<div aria-hidden="true" class="cover" style="background: #F5F5F5;">
-<div class="cover-photo"><img src="images/weeknight-kitchen.jpg" alt="" loading="lazy"><span class="cover-tag"><span data-i18n="mock.recipe">RECIPE GUIDE</span></span></div>
-<div class="cover-body"><div class="cover-title" style="color: #0A0A0A"><span data-i18n="product.kitchen">Weeknight Kitchen</span></div></div>
-</div>
-<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="build.recipes">Recipe guides</span></h3>
-<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3"><span data-i18n="build.recipesBody">Your signature recipes, beautifully laid out.</span></p>
-</div>
-
-<div style="flex: 1 1 250px; min-width: 0">
-<div aria-hidden="true" class="cover" style="background: #141414; border: 1px solid #262626;">
-<div class="cover-photo"><img src="images/starter-playbook.jpg" alt="" loading="lazy"><span class="cover-tag">PLAYBOOK</span></div>
-<div class="cover-body"><div class="cover-title" style="color: #F5F5F5"><span data-i18n="build.starter">30-Day Starter Playbook</span></div></div>
-</div>
-<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="build.guides">Guides and playbooks</span></h3>
-<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3"><span data-i18n="build.guidesBody">Step-by-step know-how from your niche.</span></p>
-</div>
-
-<div style="flex: 1 1 250px; min-width: 0">
-<div aria-hidden="true" class="cover" style="background: #E8E8E8;">
-<div class="cover-photo"><img src="images/content-planner.jpg" alt="" loading="lazy"><span class="cover-tag">TEMPLATE</span></div>
-<div class="cover-body"><div class="cover-title" style="color: #0A0A0A">Content Planner</div></div>
-</div>
-<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="build.templates">Templates and checklists</span></h3>
-<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3"><span data-i18n="build.templatesBody">Tools your audience can use the same day.</span></p>
-</div>
-
-<div style="flex: 1 1 250px; min-width: 0">
-<div aria-hidden="true" class="cover" style="background: #17122B; border: 1px solid #2C2350;">
-<div class="cover-photo"><img src="images/hard-way-guide.jpg" alt="" loading="lazy"><span class="cover-tag"><span data-i18n="build.personalTag">PERSONALITY-LED</span></span></div>
-<div class="cover-body"><div class="cover-title" style="color: #9B7BFF"><span data-i18n="product.hardway">I Learned It the Hard Way</span></div></div>
-</div>
-<h3 style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="build.personal">Personality-led products</span></h3>
-<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: #A3A3A3"><span data-i18n="build.personalBody">Funny, honest and unmistakably you.</span></p>
-</div>
-
-</div>
+<!-- Products -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-i18n="products.eyebrow">What we build</p>
+      <h2 class="h2 reveal"><span data-i18n="products.t1">Products that sound like you,</span> <em data-i18n="products.t2">not a template.</em></h2>
+    </div>
+    <div class="shelf reveal" tabindex="0" role="region" aria-label="Example products" data-i18n-aria="aria.shelf">
+      <article class="product">
+        <div class="cover cover-paper">
+          <div class="cover-photo"><img src="img/weeknight-kitchen.jpg" alt="" loading="lazy"><span class="cover-tag" data-i18n="product.recipeTag">Recipe guide</span></div>
+          <div class="cover-band"><h3 class="cover-title" data-i18n="product.kitchen">Weeknight Kitchen</h3></div>
+        </div>
+        <p class="product-kind" data-i18n="kind.recipe">Recipe guides</p>
+        <p class="product-desc" data-i18n="products.d1">Your signature recipes, beautifully laid out.</p>
+      </article>
+      <article class="product">
+        <div class="cover cover-ink">
+          <div class="cover-photo"><img src="img/starter-playbook.jpg" alt="" loading="lazy"><span class="cover-tag" data-i18n="product.playbookTag">Playbook</span></div>
+          <div class="cover-band"><h3 class="cover-title" data-i18n="product.playbook">30-Day Starter Playbook</h3></div>
+        </div>
+        <p class="product-kind" data-i18n="products.k2">Guides and playbooks</p>
+        <p class="product-desc" data-i18n="products.d2">Step-by-step know-how from your niche.</p>
+      </article>
+      <article class="product">
+        <div class="cover cover-stone">
+          <div class="cover-photo"><img src="img/content-planner.jpg" alt="" loading="lazy"><span class="cover-tag" data-i18n="product.templateTag">Template</span></div>
+          <div class="cover-band"><h3 class="cover-title" data-i18n="product.planner">Content Planner</h3></div>
+        </div>
+        <p class="product-kind" data-i18n="products.k3">Templates and checklists</p>
+        <p class="product-desc" data-i18n="products.d3">Tools your audience can use the same day.</p>
+      </article>
+      <article class="product">
+        <div class="cover cover-violet">
+          <div class="cover-photo"><img src="img/hard-way-guide.jpg" alt="" loading="lazy"><span class="cover-tag" data-i18n="product.personalTag">Personality-led</span></div>
+          <div class="cover-band"><h3 class="cover-title" data-i18n="product.hardway">I Learned It the Hard Way</h3></div>
+        </div>
+        <p class="product-kind" data-i18n="products.k4">Personality-led guides</p>
+        <p class="product-desc" data-i18n="products.d4">Funny, honest and unmistakably you.</p>
+      </article>
+    </div>
+    <p class="shelf-hint" aria-hidden="true"><span data-i18n="products.swipe">Swipe</span><svg class="ic"><use href="#i-arrow"/></svg></p>
+  </div>
 </section>
 
-<section id="math" style="border-top: 1px solid #1F1F1F">
-<div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
-<div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
-<span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span><span data-i18n="math.eyebrow">THE MATH</span></span>
-</div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 300; max-width: 900px"><span data-i18n="math.h2">See what one product could earn you.</span></h2>
-<p data-reveal style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 600px"><span data-i18n="math.lead">Move the sliders for a rough estimate. Real results depend on your audience and your launch.</span></p>
-<div data-stagger style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 20px">
-<div class="pad-card" style="flex: 3 1 460px; min-width: 0; box-sizing: border-box; background: #141414; border: 1px solid #262626; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 40px">
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<span style="font-size: 17px; font-weight: 500"><span data-i18n="math.currency">Currency</span></span>
-<div role="group" aria-label="Currency" data-i18n-aria="aria.currency" style="display: inline-flex; border: 1px solid #333333; border-radius: 999px; padding: 4px; gap: 4px">
-<button type="button" aria-pressed="true" data-cur="IDR" style="border: 0; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.08em; height: 44px; padding: 0 20px; border-radius: 999px; background: #F5F5F5; color: #0A0A0A">RUPIAH</button>
-<button type="button" aria-pressed="false" data-cur="USD" style="border: 0; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.08em; height: 44px; padding: 0 20px; border-radius: 999px; background: transparent; color: #A3A3A3">USD</button>
-</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
-<label for="ta-followers" style="font-size: 17px; font-weight: 500"><span data-i18n="math.followers">Your followers</span></label>
-<span style="font-family: 'Inter', sans-serif; font-size: 17px; color: #F5F5F5"><span data-out="followers">100K</span></span>
-</div>
-<input id="ta-followers" type="range" min="10000" max="1000000" step="10000" value="100000" style="width: 100%; height: 28px; margin: 0; cursor: pointer; accent-color: #9B7BFF">
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
-<label for="ta-conv" style="font-size: 17px; font-weight: 500"><span data-i18n="math.conv">Followers who buy</span></label>
-<span style="font-family: 'Inter', sans-serif; font-size: 17px; color: #F5F5F5"><span data-out="conv">1.0%</span></span>
-</div>
-<input id="ta-conv" type="range" min="2" max="30" step="1" value="10" style="width: 100%; height: 28px; margin: 0; cursor: pointer; accent-color: #9B7BFF">
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
-<label for="ta-price" style="font-size: 17px; font-weight: 500"><span data-i18n="math.price">Product price</span></label>
-<span style="font-family: 'Inter', sans-serif; font-size: 17px; color: #F5F5F5"><span data-out="price">Rp49.000</span></span>
-</div>
-<input id="ta-price" type="range" min="15000" max="199000" step="1000" value="49000" style="width: 100%; height: 28px; margin: 0; cursor: pointer; accent-color: #9B7BFF">
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
-<label for="ta-share" style="font-size: 17px; font-weight: 500"><span data-i18n="share.label">Your share</span></label>
-<span style="font-family: 'Inter', sans-serif; font-size: 17px; color: #F5F5F5"><span data-out="sharePick">50%</span></span>
-</div>
-<input id="ta-share" type="range" min="50" max="70" step="5" value="50" style="width: 100%; height: 28px; margin: 0; cursor: pointer; accent-color: #9B7BFF">
-</div>
-</div>
-<div class="pad-card" style="flex: 2 1 340px; min-width: 0; box-sizing: border-box; background: #17122B; border: 1px solid #2C2350; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 28px">
-<div>
-<div style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="math.buyers">ESTIMATED BUYERS</span></div>
-<div style="margin-top: 8px; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums"><span data-out="buyers">1,000</span></div>
-</div>
-<div>
-<div style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="math.sales">TOTAL SALES</span></div>
-<div style="margin-top: 8px; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums"><span data-out="sales">Rp49.000.000</span></div>
-</div>
-<div style="border-top: 1px solid #2C2350; padding-top: 28px">
-<div style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.14em; color: #A3A3A3"><span data-i18n="math.share">YOUR SHARE ·</span> <span data-out="share">50%</span></div>
-<div style="margin-top: 8px; font-size: clamp(36px, 4vw, 52px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; font-variant-numeric: tabular-nums; color: #9B7BFF; overflow-wrap: anywhere"><span data-out="yours">Rp24.500.000</span></div>
-</div>
-</div>
-<p style="margin: 0; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.1em; line-height: 1.6; color: #8A8A8A"><span data-i18n="math.note">BEFORE PLATFORM FEES. YOUR EXACT SHARE IS SET IN YOUR AGREEMENT.</span></p>
-</div>
-</div>
-<div data-reveal class="math-cta" style="margin-top: 40px; padding-top: 32px; border-top: 1px solid #1F1F1F; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px">
-<p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(26px, 3vw, 34px); font-weight: 300; letter-spacing: -0.015em; line-height: 1.15"><span data-i18n="math.ctaTitle">Curious what your content could earn?</span></p>
-<a href="https://wa.me/6281211804181" target="_blank" rel="noopener" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px"><span data-i18n="contact.wa">Chat on WhatsApp</span>
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-</a>
-</div>
-</div>
+<!-- Earnings -->
+<section class="section" id="earnings">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-i18n="earn.eyebrow">The math</p>
+      <h2 class="h2 reveal"><span data-i18n="earn.t1">See what one product</span> <em data-i18n="earn.t2">could earn you.</em></h2>
+      <p class="lead reveal" data-i18n="earn.lead">Move the sliders for a rough estimate. Real results depend on your audience and your launch.</p>
+    </div>
+
+    <div class="calc reveal">
+      <div class="calc-inputs">
+        <div class="cur">
+          <span class="field-label" data-i18n="earn.currency">Currency</span>
+          <div class="seg" role="group" aria-label="Currency" data-i18n-aria="earn.currency">
+            <button type="button" data-cur="IDR" aria-pressed="true">IDR</button>
+            <button type="button" data-cur="USD" aria-pressed="false">USD</button>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="f-followers" data-i18n="earn.followers">Your followers</label><output data-out="followers">100K</output></div>
+          <input class="range" id="f-followers" type="range" min="10000" max="1000000" step="10000" value="100000">
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="f-conv" data-i18n="earn.conv">Followers who buy</label><output data-out="conv">1.0%</output></div>
+          <input class="range" id="f-conv" type="range" min="2" max="30" step="1" value="10">
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="f-price" data-i18n="earn.price">Product price</label><output data-out="price">Rp49.000</output></div>
+          <input class="range" id="f-price" type="range" min="15000" max="199000" step="1000" value="49000">
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="f-share" data-i18n="earn.share">Your share</label><output data-out="sharePick">50%</output></div>
+          <input class="range" id="f-share" type="range" min="50" max="70" step="5" value="50">
+        </div>
+      </div>
+
+      <div class="calc-result" aria-live="polite">
+        <div class="res-row"><span data-i18n="earn.buyers">Estimated buyers</span><b data-out="buyers">1,000</b></div>
+        <div class="res-row"><span data-i18n="earn.sales">Total sales</span><b data-out="sales">Rp49.000.000</b></div>
+        <div class="res-main">
+          <span><span data-i18n="earn.yours">Your share</span> · <span data-out="share">50%</span></span>
+          <b data-out="yours">Rp24.500.000</b>
+        </div>
+        <p class="calc-note" data-i18n="earn.note">Before platform fees. Your exact share is set in your agreement.</p>
+      </div>
+    </div>
+
+    <div class="inline-cta reveal">
+      <p data-i18n="earn.cta">Curious what your content could earn?</p>
+      <a class="btn btn-lg btn-light" href="https://wa.me/6281211804181" target="_blank" rel="noopener"><span data-i18n="cta.wa">Chat on WhatsApp</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
 </section>
 
-<section id="faq" style="border-top: 1px solid #1F1F1F">
-<div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px; display: flex; flex-wrap: wrap; gap: 40px 80px">
-<div style="flex: 1 1 280px">
-<div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
-<span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span>FAQ</span>
-</div>
-<h2 data-reveal style="margin: 24px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 300"><span data-i18n="faq.h2">Questions creators ask us.</span></h2>
-</div>
-<div data-stagger style="flex: 2 1 560px; min-width: 0">
-<div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q1">Do I pay anything upfront?</span></h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a1">No. We only earn when your product sells.</span></p>
-</div>
-<div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q2">How much of my time does it take?</span></h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a2">Very little. You review the draft and promote it. We do the rest.</span></p>
-</div>
-<div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q3">How do I get paid?</span></h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a3">We sell on Lynk.id, Shopee and TikTok Shop. You get a report of every sale each month.</span></p>
-</div>
-<div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q4">Who owns the product?</span></h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a4">You do. The product belongs to you, not to ThinkAct.</span></p>
-</div>
-<div style="border-top: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q5">How long until launch?</span></h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a5">At least 3–4 weeks from our first call.</span></p>
-</div>
-<div style="border-top: 1px solid #262626; border-bottom: 1px solid #262626; padding: 26px 0">
-<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em"><span data-i18n="faq.q6">My audience isn't in Indonesia. Can we still work together?</span></h3>
-<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.55; color: #A3A3A3"><span data-i18n="faq.a6">Yes. We work with creators worldwide and sell in USD.</span></p>
-</div>
-</div>
-</div>
+<!-- The deal -->
+<section class="section deal" id="deal">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-i18n="deal.eyebrow">The deal</p>
+      <h2 class="h2 reveal"><span data-i18n="deal.t1">Simple terms,</span> <em data-i18n="deal.t2">in plain words.</em></h2>
+    </div>
+    <ul class="terms">
+      <li class="term reveal">
+        <span class="term-icon"><svg class="ic"><use href="#i-wallet"/></svg></span>
+        <h3 data-i18n="deal.1t">No upfront fee</h3>
+        <p data-i18n="deal.1p">We only earn when your product sells.</p>
+      </li>
+      <li class="term reveal" style="--delay:80ms">
+        <span class="term-icon"><svg class="ic"><use href="#i-key"/></svg></span>
+        <h3 data-i18n="deal.2t">You own it</h3>
+        <p data-i18n="deal.2p">The product belongs to you, not to ThinkAct.</p>
+      </li>
+      <li class="term term-feature reveal" style="--delay:160ms">
+        <span class="term-icon"><svg class="ic"><use href="#i-percent"/></svg></span>
+        <h3><span class="big">50–70%</span><span data-i18n="deal.3t">of every sale to you</span></h3>
+        <p data-i18n="deal.3p">Your exact share is set in your agreement.</p>
+      </li>
+      <li class="term reveal">
+        <span class="term-icon"><svg class="ic"><use href="#i-report"/></svg></span>
+        <h3 data-i18n="deal.4t">Monthly reports</h3>
+        <p data-i18n="deal.4p">Every sale, reported to you each month.</p>
+      </li>
+      <li class="term reveal" style="--delay:80ms">
+        <span class="term-icon"><svg class="ic"><use href="#i-clock"/></svg></span>
+        <h3 data-i18n="deal.5t">At least 3–4 weeks to launch</h3>
+        <p data-i18n="deal.5p">Counted from our first call.</p>
+      </li>
+      <li class="term reveal" style="--delay:160ms">
+        <span class="term-icon"><svg class="ic"><use href="#i-store"/></svg></span>
+        <h3 data-i18n="deal.6t">Sold where your audience shops</h3>
+        <p data-i18n="deal.6p">Lynk.id, Shopee and TikTok Shop.</p>
+      </li>
+    </ul>
+  </div>
 </section>
 
-<section id="contact" style="border-top: 1px solid #1F1F1F">
-<div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center">
-<div data-reveal style="font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #A3A3A3; display: flex; align-items: center; gap: 10px">
-<span style="width: 8px; height: 8px; background: #9B7BFF; display: inline-block; flex-shrink: 0"></span>
-<span><span data-i18n="contact.eyebrow">WORK WITH US</span></span>
-</div>
-<h2 data-reveal style="margin: 28px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(42px, 6.4vw, 94px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 300; max-width: 1000px"><span data-i18n="contact.h2a">Ready to turn your content into</span> <span style="color: #9B7BFF"><span data-i18n="contact.h2b">a product?</span></span></h2>
-<p data-reveal style="margin: 32px 0 0; font-size: 19px; line-height: 1.6; color: #A3A3A3; max-width: 520px"><span data-i18n="contact.lead">Tell us about your content and we'll come back with a product idea.</span></p>
-<div data-reveal class="contact-actions" style="margin-top: 44px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
-<a href="https://wa.me/6281211804181" target="_blank" rel="noopener" style="background: #F5F5F5; color: #0A0A0A; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px"><span data-i18n="contact.wa">Chat on WhatsApp</span>
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-</a>
-<a href="mailto:joshuajoelaskoro@gmail.com" style="border: 1px solid #333333; color: #F5F5F5; font-family: 'Instrument Sans', sans-serif; font-weight: 500; font-size: 16px; padding: 0 28px; height: 56px; display: inline-flex; align-items: center; border-radius: 999px"><span data-i18n="contact.email">Email us</span></a>
-</div>
-<p data-reveal class="contact-links" style="margin: 32px 0 0; font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.1em; color: #8A8A8A"><a href="https://wa.me/6281211804181" target="_blank" rel="noopener" style="color: inherit">+62 812-1180-4181</a><span class="sep" aria-hidden="true"> · </span><a href="mailto:joshuajoelaskoro@gmail.com" style="color: inherit">joshuajoelaskoro@gmail.com</a><span class="sep" aria-hidden="true"> · </span><a href="https://instagram.com/joshuajoelaskoro" target="_blank" rel="noopener" style="color: inherit">@joshuajoelaskoro</a></p>
-</div>
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container faq-grid">
+    <div class="section-head">
+      <p class="eyebrow reveal">FAQ</p>
+      <h2 class="h2 reveal"><span data-i18n="faq.t1">Questions creators</span> <em data-i18n="faq.t2">ask us.</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary><span data-i18n="faq.q1">Do I pay anything upfront?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.a1">No. We only earn when your product sells.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q2">How much of my time does it take?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.a2">Very little. You review the draft and promote it. We do the rest.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q3">How do I get paid?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.a3">We sell on Lynk.id, Shopee and TikTok Shop. You get a report of every sale each month.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q4">Who owns the product?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.a4">You do. The product belongs to you, not to ThinkAct.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q5">How long until launch?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.a5">At least 3–4 weeks from our first call.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q6">My audience isn't in Indonesia. Can we still work together?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.a6">Yes. We work with creators worldwide and sell in USD.</p>
+      </details>
+    </div>
+  </div>
 </section>
 
-<footer style="border-top: 1px solid #1F1F1F">
-<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; justify-content: space-between; align-items: center; font-size: 14px; color: #8A8A8A">
-<div style="display: flex; align-items: center; gap: 10px">
-<span style="font-size: 18px; font-weight: 800; letter-spacing: -0.03em; color: #F5F5F5">ThinkAct</span>
-<span style="width: 6px; height: 6px; background: #9B7BFF; display: inline-block"></span>
-<span><span data-i18n="footer.tag">Digital products, built with creators.</span></span>
-</div>
-<span>© 2026 ThinkAct Studio · Jakarta, Indonesia</span>
-</div>
+<!-- Final call to action -->
+<section class="final" id="contact">
+  <div class="container">
+    <div class="final-card reveal">
+      <div class="final-glow" aria-hidden="true"></div>
+      <p class="eyebrow eyebrow-center" data-i18n="final.eyebrow">Work with us</p>
+      <h2 class="h2"><span data-i18n="final.t1">Let's turn your content</span> <em data-i18n="final.t2">into a product.</em></h2>
+      <p class="lead" data-i18n="final.lead">Tell us about your content. We'll come back with a product idea.</p>
+      <div class="actions actions-center">
+        <a class="btn btn-lg btn-light" href="https://wa.me/6281211804181" target="_blank" rel="noopener"><span data-i18n="cta.wa">Chat on WhatsApp</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-lg btn-ghost" href="mailto:joshuajoelaskoro@gmail.com" data-i18n="cta.email">Email us</a>
+      </div>
+      <div class="contact-list">
+        <a href="https://wa.me/6281211804181" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg>+62 812-1180-4181</a>
+        <a href="mailto:joshuajoelaskoro@gmail.com"><svg class="ic"><use href="#i-mail"/></svg>joshuajoelaskoro@gmail.com</a>
+        <a href="https://instagram.com/joshuajoelaskoro" target="_blank" rel="noopener"><svg class="ic"><use href="#i-insta"/></svg>@joshuajoelaskoro</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-row">
+    <a href="#top" class="logo"><span class="logo-word">ThinkAct</span><span class="logo-dot"></span></a>
+    <span data-i18n="footer.tag">Digital products, built with creators.</span>
+    <span>© 2026 ThinkAct Studio · Jakarta, Indonesia</span>
+  </div>
 </footer>
 
-</div>
 </body>
 </html>
