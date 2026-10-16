@@ -145,6 +145,9 @@ window.TA_COPY_ID = {
   'faq.a5': "Minimal 3–4 minggu sejak obrolan pertama kita.",
   'faq.q6': "Audiensku bukan di Indonesia. Masih bisa kerja sama?",
   'faq.a6': "Bisa. Kami bekerja sama dengan kreator dari mana saja dan berjualan dalam USD.",
+  'faq.q7': "Bisakah aku dapat penghasilan dengan mengenalkan kreator lain ke ThinkAct?",
+  'faq.a7': "Bisa. Kalau kamu kenal kreator yang seharusnya punya produk sendiri, kamu bisa dapat komisi dari bagian ThinkAct saat produk mereka terjual. Komisi ini tidak pernah diambil dari bagian kreator.",
+  'faq.a7link': "Lihat program partner",
 
   // Final call to action and footer
   'final.eyebrow': "Kerja sama",
@@ -153,10 +156,9 @@ window.TA_COPY_ID = {
   'final.lead': "Ceritakan soal kontenmu. Nanti kami kembali dengan ide produk.",
   'footer.tag': "Produk digital, dibuat bersama kreator.",
 
-  // Partner program: links on the homepage
+  // Partner program: names used on the partner page
   'nav.partners': "Partner",
   'footer.partner': "Program partner",
-  'home.partnerStrip': "Kenal kreator yang seharusnya punya produk sendiri? Dapat penghasilan dengan mengajak mereka ke ThinkAct.",
 
   // Partner page (/partner)
   'partner.eyebrow': "Program partner",

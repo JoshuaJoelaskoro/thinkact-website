@@ -351,6 +351,8 @@ details[open] .plus::before,details[open] .plus::after{background:var(--ink)}
 details[open] .plus::after{transform:translate(-50%,-50%) rotate(0deg)}
 .faq-list details p{padding:0 52px 24px 0;font-size:16px;color:var(--muted)}
 details[open] p{animation:fade-down .4s var(--ease)}
+.faq-link{display:inline-block;padding:10px 0;color:var(--violet);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.faq-link:hover{color:var(--text)}
 @keyframes fade-down{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 
 /* Final call to action */
@@ -382,13 +384,6 @@ details[open] p{animation:fade-down .4s var(--ease)}
 .footer-link{display:inline-flex;align-items:center;min-height:44px;color:var(--muted);transition:color .2s}
 .footer-link:hover{color:var(--text)}
 
-/* Homepage strip between FAQ and Contact */
-.partner-strip{padding:0 0 40px}
-.strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding:18px 22px;border:1px solid var(--violet-line);border-radius:var(--radius);background:linear-gradient(90deg,rgba(143,114,255,.10),rgba(143,114,255,0) 70%)}
-.strip p{font-size:16px;line-height:1.5;color:var(--muted);max-width:640px}
-.strip-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;color:var(--violet);white-space:nowrap}
-.strip-link .ic{width:18px;height:18px;transition:transform .25s var(--ease)}
-.strip-link:hover .ic{transform:translateX(3px)}
 
 /* Hero example card */
 .earn-card{position:relative;max-width:460px;margin:0 auto;padding:22px;overflow:hidden;border:1px solid var(--violet-line);border-radius:28px;background:radial-gradient(120% 80% at 100% 0%,rgba(143,114,255,.30),transparent 60%),var(--violet-soft);box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
