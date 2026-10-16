@@ -35,10 +35,16 @@ window.__ta2 = true;
   var texts = document.querySelectorAll('[data-i18n]');
   var labels = document.querySelectorAll('[data-i18n-aria]');
   var meta = document.querySelector('meta[name="description"]');
-  EN['meta.title'] = document.title;
-  EN['meta.description'] = meta ? meta.content : '';
+  // Each page has its own title and description keys: "meta.*" on the homepage, "<data-meta>.*" elsewhere.
+  var metaKey = root.getAttribute('data-meta') || 'meta';
+  EN[metaKey + '.title'] = document.title;
+  EN[metaKey + '.description'] = meta ? meta.content : '';
   texts.forEach(function (el) { EN[el.getAttribute('data-i18n')] = el.textContent; });
   labels.forEach(function (el) { EN[el.getAttribute('data-i18n-aria')] = el.getAttribute('aria-label'); });
+  // WhatsApp links with data-wa="key" open with a ready-made message: English is in the link itself,
+  // Indonesian is the copy-id.js text under that key.
+  var waLinks = document.querySelectorAll('[data-wa]');
+  waLinks.forEach(function (a) { a._enHref = a.getAttribute('href'); });
   window.taLang = 'en';
   function t(key) { return window.taLang === 'id' && ID[key] != null ? ID[key] : EN[key]; }
 
@@ -47,8 +53,12 @@ window.__ta2 = true;
     window.taLang = lang;
     texts.forEach(function (el) { el.textContent = t(el.getAttribute('data-i18n')); });
     labels.forEach(function (el) { el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria'))); });
-    document.title = t('meta.title');
-    if (meta) meta.content = t('meta.description');
+    waLinks.forEach(function (a) {
+      var message = lang === 'id' ? ID[a.getAttribute('data-wa')] : null;
+      a.setAttribute('href', message ? a._enHref.split('?')[0] + '?text=' + encodeURIComponent(message) : a._enHref);
+    });
+    document.title = t(metaKey + '.title');
+    if (meta) meta.content = t(metaKey + '.description');
     root.lang = lang;
     langButtons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
     document.dispatchEvent(new Event('ta:lang'));
@@ -265,5 +275,52 @@ window.__ta2 = true;
       render();
     });
     render();
+  }
+
+  /* ---------- Partner earnings estimator (partner page) ----------
+     partner share = followers × 0.5% buy × price × (1 − 5% platform fee) × 40% ThinkAct share
+                     × 25% partner share (find + manage) × creators, spread over 6 months. */
+  var pCreators = document.getElementById('p-creators');
+  var pFollowers = document.getElementById('p-followers');
+  var pPrice = document.getElementById('p-price');
+  if (pCreators && pFollowers && pPrice) {
+    var BUY_RATE = 0.005, PLATFORM_FEE = 0.05, THINKACT_SHARE = 0.40, PARTNER_SHARE = 0.25;
+    var MONTH_CURVE = [0.40, 0.20, 0.10, 0.10, 0.10, 0.10];
+    var pOut = function (key) { return document.querySelector('[data-pout="' + key + '"]'); };
+    var monthBars = document.querySelectorAll('.mbar');
+    // Short amounts above the bars: 931K / 931 rb, 1.2M / 1,2 jt.
+    var compact = function (n) {
+      var isID = window.taLang === 'id';
+      if (n >= 1000000) {
+        var m = (n / 1000000).toFixed(n >= 10000000 ? 0 : 1);
+        return isID ? m.replace('.', ',') + ' jt' : m + 'M';
+      }
+      return Math.round(n / 1000) + (isID ? ' rb' : 'K');
+    };
+    var pFill = function (input) {
+      var min = Number(input.min), max = Number(input.max), v = Number(input.value);
+      input.style.setProperty('--p', ((v - min) / (max - min) * 100) + '%');
+    };
+    var pRender = function () {
+      var isID = window.taLang === 'id';
+      var creators = Number(pCreators.value);
+      var followers = Number(pFollowers.value);
+      var price = Number(pPrice.value);
+      var total = Math.round(followers * BUY_RATE * price * (1 - PLATFORM_FEE) * THINKACT_SHARE * PARTNER_SHARE * creators);
+      pOut('creators').textContent = String(creators);
+      pOut('followers').textContent = Math.round(followers / 1000) + (isID ? ' rb' : 'K');
+      pOut('price').textContent = money(price, 'IDR');
+      tween(pOut('total'), total, function (n) { return money(n, 'IDR'); }, 600);
+      var first = total * MONTH_CURVE[0];
+      monthBars.forEach(function (bar, i) {
+        var amount = Math.round(total * MONTH_CURVE[i]);
+        bar.querySelector('.mbar-fill').style.height = (first ? amount / first * 100 : 0) + '%';
+        bar.querySelector('.mbar-val').textContent = compact(amount);
+      });
+      [pCreators, pFollowers, pPrice].forEach(pFill);
+    };
+    [pCreators, pFollowers, pPrice].forEach(function (input) { input.addEventListener('input', pRender); });
+    document.addEventListener('ta:lang', pRender);
+    pRender();
   }
 })();
