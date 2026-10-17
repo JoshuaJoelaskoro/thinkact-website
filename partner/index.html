@@ -101,16 +101,16 @@ setTimeout(function () { if (!window.__ta2) document.documentElement.classList.r
           <span class="tag" data-i18n="partner.cardRole">Partner</span>
         </div>
         <span class="ec-label" data-i18n="partner.cardLabel">Your share, month 1</span>
-        <span class="ec-amount">Rp931.000</span>
+        <span class="ec-amount">Rp950.000</span>
         <div class="ec-bars" aria-hidden="true">
           <i style="--h:100%"></i><i style="--h:50%"></i><i style="--h:25%"></i><i style="--h:25%"></i><i style="--h:25%"></i><i style="--h:25%"></i>
         </div>
         <div class="toast toast-inline" aria-hidden="true">
           <span class="toast-icon"><svg class="ic"><use href="#i-bag"/></svg></span>
           <span class="toast-text"><b data-i18n="toast.order">New order</b><span class="toast-item" data-i18n="product.kitchen">Weeknight Kitchen</span></span>
-          <span class="toast-amt">+Rp4.655</span>
+          <span class="toast-amt">+Rp4.750</span>
         </div>
-        <p class="ec-note" data-i18n="partner.cardNote">Example, not guaranteed. 1 creator with 100K followers, a Rp49.000 product, 0.5% of followers buying, a 5% platform fee, a 60/40 split and your 25% find + manage share.</p>
+        <p class="ec-note" data-i18n="partner.cardNote">Example, not guaranteed. 1 creator with 100K followers, a Rp50.000 product, 0.5% of followers buying, a 5% platform fee, a 60/40 split and your 25% find + manage share.</p>
       </div>
     </div>
   </div>
@@ -166,8 +166,17 @@ setTimeout(function () { if (!window.__ta2) document.documentElement.classList.r
           <input class="range" id="p-followers" type="range" min="20000" max="300000" step="10000" value="100000">
         </div>
         <div class="field">
-          <div class="field-top"><label for="p-price" data-i18n="earn.price">Product price</label><output data-pout="price">Rp49.000</output></div>
-          <input class="range" id="p-price" type="range" min="29000" max="99000" step="5000" value="49000">
+          <div class="field-top"><label for="p-conv" data-i18n="earn.conv">Followers who buy</label><output data-pout="conv">0.5%</output></div>
+          <input class="range" id="p-conv" type="range" min="2" max="30" step="1" value="5">
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="p-price" data-i18n="earn.price">Product price</label><output data-pout="price">Rp50.000</output></div>
+          <input class="range" id="p-price" type="range" min="10000" max="100000" step="5000" value="50000">
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="p-split" data-i18n="partner.taShare">ThinkAct's share of sales</label><output data-pout="split">40%</output></div>
+          <input class="range" id="p-split" type="range" min="30" max="50" step="5" value="40">
+          <p class="field-hint"><span data-i18n="partner.creatorKeeps">Creator keeps</span> <span data-pout="creatorPct">60%</span></p>
         </div>
       </div>
 
@@ -177,21 +186,21 @@ setTimeout(function () { if (!window.__ta2) document.documentElement.classList.r
         </div>
         <div class="res-main">
           <span data-i18n="partner.total">Your share over 6 months</span>
-          <b data-pout="total">Rp2.327.500</b>
+          <b data-pout="total">Rp2.375.000</b>
         </div>
         <div aria-hidden="true">
           <div class="mbars">
-            <div class="mbar"><span class="mbar-val">931K</span><span class="mbar-fill" style="height:100%"></span></div>
-            <div class="mbar"><span class="mbar-val">466K</span><span class="mbar-fill" style="height:50%"></span></div>
-            <div class="mbar"><span class="mbar-val">233K</span><span class="mbar-fill" style="height:25%"></span></div>
-            <div class="mbar"><span class="mbar-val">233K</span><span class="mbar-fill" style="height:25%"></span></div>
-            <div class="mbar"><span class="mbar-val">233K</span><span class="mbar-fill" style="height:25%"></span></div>
-            <div class="mbar"><span class="mbar-val">233K</span><span class="mbar-fill" style="height:25%"></span></div>
+            <div class="mbar"><span class="mbar-val">950K</span><span class="mbar-fill" style="height:100%"></span></div>
+            <div class="mbar"><span class="mbar-val">475K</span><span class="mbar-fill" style="height:50%"></span></div>
+            <div class="mbar"><span class="mbar-val">238K</span><span class="mbar-fill" style="height:25%"></span></div>
+            <div class="mbar"><span class="mbar-val">238K</span><span class="mbar-fill" style="height:25%"></span></div>
+            <div class="mbar"><span class="mbar-val">238K</span><span class="mbar-fill" style="height:25%"></span></div>
+            <div class="mbar"><span class="mbar-val">238K</span><span class="mbar-fill" style="height:25%"></span></div>
           </div>
           <div class="mbar-x"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
           <span class="mbar-caption" data-i18n="partner.month">Month</span>
         </div>
-        <p class="calc-note" data-i18n="partner.calcNote">Example, not guaranteed. Assumes 0.5% of followers buy, a 5% platform fee, a 60/40 split, and your 25% find + manage share. Depends on the creator's deal.</p>
+        <p class="calc-note" data-i18n="partner.calcNote">Example, not guaranteed. Uses the numbers above, a 5% platform fee and your 25% find + manage share. Real results depend on the creator's audience and deal.</p>
       </div>
     </div>
   </div>

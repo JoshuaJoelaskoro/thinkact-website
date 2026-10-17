@@ -278,13 +278,16 @@ window.__ta2 = true;
   }
 
   /* ---------- Partner earnings estimator (partner page) ----------
-     partner share = followers × 0.5% buy × price × (1 − 5% platform fee) × 40% ThinkAct share
-                     × 25% partner share (find + manage) × creators, spread over 6 months. */
+     partner share = followers × buy rate × price × (1 − 5% platform fee) × ThinkAct's share
+                     × 25% partner share (find + manage) × creators, spread over 6 months.
+     Buy rate (0.2–3%) and ThinkAct's share (30–50%) come from sliders; the fee and partner share are fixed. */
   var pCreators = document.getElementById('p-creators');
   var pFollowers = document.getElementById('p-followers');
+  var pConv = document.getElementById('p-conv');
   var pPrice = document.getElementById('p-price');
-  if (pCreators && pFollowers && pPrice) {
-    var BUY_RATE = 0.005, PLATFORM_FEE = 0.05, THINKACT_SHARE = 0.40, PARTNER_SHARE = 0.25;
+  var pSplit = document.getElementById('p-split');
+  if (pCreators && pFollowers && pConv && pPrice && pSplit) {
+    var PLATFORM_FEE = 0.05, PARTNER_SHARE = 0.25;
     var MONTH_CURVE = [0.40, 0.20, 0.10, 0.10, 0.10, 0.10];
     var pOut = function (key) { return document.querySelector('[data-pout="' + key + '"]'); };
     var monthBars = document.querySelectorAll('.mbar');
@@ -305,11 +308,17 @@ window.__ta2 = true;
       var isID = window.taLang === 'id';
       var creators = Number(pCreators.value);
       var followers = Number(pFollowers.value);
+      var convX10 = Number(pConv.value);
       var price = Number(pPrice.value);
-      var total = Math.round(followers * BUY_RATE * price * (1 - PLATFORM_FEE) * THINKACT_SHARE * PARTNER_SHARE * creators);
+      var split = Number(pSplit.value);
+      var total = Math.round(followers * (convX10 / 1000) * price * (1 - PLATFORM_FEE) * (split / 100) * PARTNER_SHARE * creators);
       pOut('creators').textContent = String(creators);
       pOut('followers').textContent = Math.round(followers / 1000) + (isID ? ' rb' : 'K');
+      var conv = (convX10 / 10).toFixed(1);
+      pOut('conv').textContent = (isID ? conv.replace('.', ',') : conv) + '%';
       pOut('price').textContent = money(price, 'IDR');
+      pOut('split').textContent = split + '%';
+      pOut('creatorPct').textContent = (100 - split) + '%';
       tween(pOut('total'), total, function (n) { return money(n, 'IDR'); }, 600);
       var first = total * MONTH_CURVE[0];
       monthBars.forEach(function (bar, i) {
@@ -317,9 +326,9 @@ window.__ta2 = true;
         bar.querySelector('.mbar-fill').style.height = (first ? amount / first * 100 : 0) + '%';
         bar.querySelector('.mbar-val').textContent = compact(amount);
       });
-      [pCreators, pFollowers, pPrice].forEach(pFill);
+      [pCreators, pFollowers, pConv, pPrice, pSplit].forEach(pFill);
     };
-    [pCreators, pFollowers, pPrice].forEach(function (input) { input.addEventListener('input', pRender); });
+    [pCreators, pFollowers, pConv, pPrice, pSplit].forEach(function (input) { input.addEventListener('input', pRender); });
     document.addEventListener('ta:lang', pRender);
     pRender();
   }

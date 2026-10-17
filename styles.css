@@ -420,6 +420,8 @@ details[open] p{animation:fade-down .4s var(--ease)}
 .mbar:first-child .mbar-val{color:var(--text)}
 .mbar-x{display:flex;gap:8px;margin-top:8px}
 .mbar-x span{flex:1;text-align:center;font:500 11px/1 var(--mono);color:var(--muted-2)}
+.field-hint{margin-top:2px;font-size:13px;color:var(--muted)}
+.field-hint span:last-child{font-family:var(--mono);color:var(--text)}
 .mbar-caption{display:block;margin-top:8px;text-align:center;font:500 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2)}
 
 /* Growth tiers */
