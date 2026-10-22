@@ -397,8 +397,8 @@ details[open] p{animation:fade-down .4s var(--ease)}
 .creator-photo img.creator-logo{object-fit:contain;background:#fff}
 @media (min-width:1024px){ .creator-photo{aspect-ratio:4/3} }
 .creator-quote{flex:1;margin:0;padding:22px 22px 0}
-.creator-quote::before{content:"\201C";display:block;height:26px;font-family:var(--serif);font-size:64px;line-height:1;color:var(--violet)}
-.creator-quote p{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.15;letter-spacing:-.005em;text-wrap:balance}
+.creator-quote::before{content:"\201C";display:block;height:22px;font-family:var(--serif);font-size:54px;line-height:1;color:var(--violet)}
+.creator-quote p{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.25;letter-spacing:-.005em;text-wrap:pretty}
 .creator figcaption{display:flex;flex-direction:column;gap:6px;margin:22px 22px 22px;padding-top:16px;border-top:1px solid var(--line)}
 .creator-name{font-family:var(--serif);font-size:24px;line-height:1.05}
 .creator-stat{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
