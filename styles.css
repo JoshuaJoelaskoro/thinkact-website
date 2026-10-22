@@ -403,6 +403,11 @@ details[open] p{animation:fade-down .4s var(--ease)}
 .creator-name{font-family:var(--serif);font-size:24px;line-height:1.05}
 .creator-stat{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .creator-stat b{margin-right:4px;font-size:16px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--text)}
+.creator-photo.is-empty{display:grid;place-items:center;color:#3A3A44}
+.creator-photo.is-empty .ic{width:64px;height:64px;stroke-width:1.2}
+.creator-ig{display:inline-flex;align-items:center;gap:8px;min-height:32px;font-family:var(--mono);font-size:14px;color:var(--muted);transition:color .2s}
+.creator-ig:hover{color:var(--text)}
+.creator-ig .ic{width:18px;height:18px;color:var(--violet)}
 .creator-invite{justify-content:flex-end;gap:16px;padding:26px 24px;border-color:var(--violet-line);background:radial-gradient(120% 70% at 100% 0%,rgba(143,114,255,.30),transparent 60%),var(--violet-soft)}
 .creator-invite h3{font-family:var(--serif);font-weight:400;font-size:clamp(38px,10vw,52px);line-height:1}
 .creator-invite h3 em{color:var(--violet)}

@@ -37,6 +37,7 @@ setTimeout(function () { if (!window.__ta2) document.documentElement.classList.r
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
   <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4.5 19.5h4l10-10a2.1 2.1 0 0 0-3-3l-10 10z"/><path d="M14 8l2.5 2.5"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 19.5a7 7 0 0 1 14 0"/></symbol>
   <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7h.01"/></symbol>
 </svg>
 
@@ -202,6 +203,45 @@ setTimeout(function () { if (!window.__ta2) document.documentElement.classList.r
         <p class="calc-note" data-i18n="partner.calcNote">Example, not guaranteed. Uses the numbers above, a 5% platform fee and your 25% find + manage share. Real results depend on the creator's audience and deal.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Our partners -->
+<section class="section" id="partners">
+  <div class="container">
+    <div class="creators-head">
+      <div class="section-head">
+        <p class="eyebrow reveal" data-i18n="partners.eyebrow">Our partners</p>
+        <h2 class="h2 reveal"><span data-i18n="partners.t1">Partners,</span> <em data-i18n="partners.t2">in their own words.</em></h2>
+      </div>
+      <div class="car-nav reveal">
+        <button type="button" class="car-btn" data-car="-1" aria-label="Previous" data-i18n-aria="aria.prev"><svg class="ic ic-back"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="car-btn" data-car="1" aria-label="Next" data-i18n-aria="aria.next"><svg class="ic"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+    <div class="car reveal" tabindex="0" role="region" aria-label="Our partners" data-i18n-aria="partners.eyebrow">
+      <figure class="creator">
+        <div class="creator-photo is-empty" aria-hidden="true"><svg class="ic"><use href="#i-user"/></svg></div>
+        <blockquote class="creator-quote"><p data-i18n="partners.q1">I know so many creators with great content and nothing to sell. Now I can actually help them.</p></blockquote>
+        <figcaption><span class="creator-name">Joshua</span><a class="creator-ig" href="https://instagram.com/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-insta"/></svg>@instagram</a></figcaption>
+      </figure>
+      <figure class="creator">
+        <div class="creator-photo is-empty" aria-hidden="true"><svg class="ic"><use href="#i-user"/></svg></div>
+        <blockquote class="creator-quote"><p data-i18n="partners.q2">Introduce a creator, ThinkAct does the heavy lifting. Simple as that.</p></blockquote>
+        <figcaption><span class="creator-name">Khairi</span><a class="creator-ig" href="https://instagram.com/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-insta"/></svg>@instagram</a></figcaption>
+      </figure>
+      <figure class="creator">
+        <div class="creator-photo is-empty" aria-hidden="true"><svg class="ic"><use href="#i-user"/></svg></div>
+        <blockquote class="creator-quote"><p data-i18n="partners.q3">Didn't need my own followers to start. Just a good eye for creators.</p></blockquote>
+        <figcaption><span class="creator-name">Qiyya</span><a class="creator-ig" href="https://instagram.com/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-insta"/></svg>@instagram</a></figcaption>
+      </figure>
+      <div class="creator creator-invite">
+        <h3><span data-i18n="partners.inviteT1">Your name</span> <em data-i18n="partners.inviteT2">could be here.</em></h3>
+        <p data-i18n="partner.finalLead">Send us your name, your Instagram and the creators you could bring. We'll reply on WhatsApp.</p>
+        <a class="btn btn-lg btn-light" href="https://wa.me/6281211804181?text=Hi%20ThinkAct%2C%20I'd%20like%20to%20apply%20as%20a%20partner.%0AName%3A%20%0AInstagram%3A%20%0ACreators%20I%20could%20bring%3A%20" data-wa="partner.waMsg" target="_blank" rel="noopener"><span data-i18n="partner.apply">Apply as a partner</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="car-dots" aria-hidden="true"></div>
   </div>
 </section>
 
