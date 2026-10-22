@@ -379,6 +379,39 @@ details[open] p{animation:fade-down .4s var(--ease)}
 .footer-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px}
 .footer .logo-word{color:var(--text)}
 
+/* ---------- Our creators: swipeable quote cards ---------- */
+.creators-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+.car-nav{display:none;gap:10px;flex-shrink:0}
+@media (min-width:720px){ .car-nav{display:flex} }
+.car-btn{display:grid;place-items:center;width:52px;height:52px;padding:0;border:1px solid var(--line-2);border-radius:50%;background:transparent;color:var(--text);cursor:pointer;transition:border-color .25s,background .25s,opacity .25s}
+.car-btn:hover{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.04)}
+.car-btn:disabled{opacity:.3;cursor:default;background:transparent}
+.ic-back{transform:rotate(180deg)}
+.car{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:14px;margin:44px calc(var(--pad) * -1) 0;padding:4px var(--pad) 12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad);scrollbar-width:none;overscroll-behavior-x:contain}
+.car::-webkit-scrollbar{display:none}
+@media (min-width:720px){ .car{grid-auto-columns:44%} }
+@media (min-width:1024px){ .car{grid-auto-columns:31%;gap:18px;margin-top:56px} }
+.creator{display:flex;flex-direction:column;margin:0;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:var(--ink-2);scroll-snap-align:start}
+.creator-photo{position:relative;aspect-ratio:1/1;background:#18181D}
+.creator-photo img{width:100%;height:100%;object-fit:cover}
+.creator-photo img.creator-logo{object-fit:contain;background:#fff}
+@media (min-width:1024px){ .creator-photo{aspect-ratio:4/3} }
+.creator-quote{flex:1;margin:0;padding:22px 22px 0}
+.creator-quote::before{content:"\201C";display:block;height:26px;font-family:var(--serif);font-size:64px;line-height:1;color:var(--violet)}
+.creator-quote p{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.15;letter-spacing:-.005em;text-wrap:balance}
+.creator figcaption{display:flex;flex-direction:column;gap:6px;margin:22px 22px 22px;padding-top:16px;border-top:1px solid var(--line)}
+.creator-name{font-family:var(--serif);font-size:24px;line-height:1.05}
+.creator-stat{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.creator-stat b{margin-right:4px;font-size:16px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--text)}
+.creator-invite{justify-content:flex-end;gap:16px;padding:26px 24px;border-color:var(--violet-line);background:radial-gradient(120% 70% at 100% 0%,rgba(143,114,255,.30),transparent 60%),var(--violet-soft)}
+.creator-invite h3{font-family:var(--serif);font-weight:400;font-size:clamp(38px,10vw,52px);line-height:1}
+.creator-invite h3 em{color:var(--violet)}
+.creator-invite p{font-size:16px;color:var(--muted)}
+.creator-invite .btn{align-self:stretch;margin-top:8px}
+.car-dots{display:flex;justify-content:center;gap:6px;margin-top:20px}
+.car-dots i{width:6px;height:6px;border-radius:3px;background:var(--violet-line);transition:width .3s var(--ease),background .3s}
+.car-dots i.on{width:20px;background:var(--violet)}
+
 /* ---------- Partner program ---------- */
 .nav-links a[aria-current="page"],.menu a[aria-current="page"]{color:var(--violet)}
 .footer-link{display:inline-flex;align-items:center;min-height:44px;color:var(--muted);transition:color .2s}

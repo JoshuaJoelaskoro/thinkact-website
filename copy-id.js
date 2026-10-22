@@ -97,6 +97,17 @@ window.TA_COPY_ID = {
   'products.d4': "Lucu, jujur, dan kamu banget.",
   'products.swipe': "Geser",
 
+  // Our creators
+  'creators.eyebrow': "Kreator kami",
+  'creators.t1': "Kata",
+  'creators.t2': "mereka sendiri.",
+  'creators.q1': "Lagi dimasak bareng ThinkAct. Tunggu tanggal mainnya.",
+  'creators.q2': "Aku tinggal bikin konten, sisanya ThinkAct yang urus.",
+  'creators.q3': "Nggak nyangka konten harianku bisa jadi produk.",
+  'creators.followers': "followers",
+  'creators.inviteT1': "Berikutnya,",
+  'creators.inviteT2': "giliranmu.",
+
   // Earnings estimator
   'earn.eyebrow': "Simulasi",
   'earn.t1': "Lihat potensi cuan",
@@ -211,7 +222,6 @@ window.TA_COPY_ID = {
   'partner.r3': "Cek pasar dulu",
   'partner.r4': "Hanya ThinkAct yang tanda tangan",
   'partner.r5': "Partner berbasis komisi",
-  'partner.r6': "2 produk baru per bulan",
   'partner.faqT1': "Pertanyaan yang sering",
   'partner.faqT2': "ditanyakan partner.",
   'partner.q1': "Apakah ada biaya untuk bergabung?",
@@ -234,5 +244,7 @@ window.TA_COPY_ID = {
   'aria.nav': "Utama",
   'aria.lang': "Bahasa",
   'aria.menu': "Menu",
+  'aria.prev': "Sebelumnya",
+  'aria.next': "Berikutnya",
   'aria.shelf': "Contoh produk",
 };

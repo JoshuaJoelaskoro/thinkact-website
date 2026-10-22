@@ -277,6 +277,54 @@ window.__ta2 = true;
     render();
   }
 
+  /* ---------- Our creators: swipe row with arrows and dots ---------- */
+  var car = document.querySelector('.car');
+  if (car) {
+    var cards = Array.prototype.slice.call(car.children);
+    var dotsBox = document.querySelector('.car-dots');
+    var dots = cards.map(function () { var d = document.createElement('i'); dotsBox.appendChild(d); return d; });
+    var prevBtn = document.querySelector('[data-car="-1"]');
+    var nextBtn = document.querySelector('[data-car="1"]');
+    var step = function () { return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : car.clientWidth; };
+    var carTicking = false;
+    var syncCar = function () {
+      var max = car.scrollWidth - car.clientWidth;
+      var current = Math.min(cards.length - 1, Math.round(car.scrollLeft / step()));
+      // At the far right the last cards can't snap to the start, so light the last dot.
+      if (car.scrollLeft >= max - 4) current = cards.length - 1;
+      dots.forEach(function (d, i) { d.classList.toggle('on', i === current); });
+      if (prevBtn) prevBtn.disabled = car.scrollLeft <= 4;
+      if (nextBtn) nextBtn.disabled = car.scrollLeft >= max - 4;
+      carTicking = false;
+    };
+    car.addEventListener('scroll', function () {
+      if (!carTicking) { carTicking = true; requestAnimationFrame(syncCar); }
+    }, { passive: true });
+    [prevBtn, nextBtn].forEach(function (b) {
+      if (!b) return;
+      b.addEventListener('click', function () {
+        car.scrollBy({ left: Number(b.getAttribute('data-car')) * step(), behavior: reduce ? 'auto' : 'smooth' });
+      });
+    });
+    window.addEventListener('resize', syncCar);
+    syncCar();
+  }
+
+  // Follower counts: 87.5K in English, 87,5 rb in Indonesian.
+  var followerEls = document.querySelectorAll('[data-followers]');
+  var showFollowers = function () {
+    var isID = window.taLang === 'id';
+    followerEls.forEach(function (el) {
+      var k = Number(el.getAttribute('data-followers')) / 1000;
+      var text = String(Math.round(k * 10) / 10);
+      el.textContent = isID ? text.replace('.', ',') + ' rb' : text + 'K';
+    });
+  };
+  if (followerEls.length) {
+    document.addEventListener('ta:lang', showFollowers);
+    showFollowers();
+  }
+
   /* ---------- Partner earnings estimator (partner page) ----------
      partner share = followers × buy rate × price × (1 − 5% platform fee) × ThinkAct's share
                      × 25% partner share (find + manage) × creators, spread over 6 months.
